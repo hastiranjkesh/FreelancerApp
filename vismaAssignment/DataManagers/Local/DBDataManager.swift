@@ -14,4 +14,5 @@ protocol DBDataManager {
     func deleteProject(_ data: ProjectModel, completion: @escaping () -> Void)
     func updateProjectWithTime(_ projectId: String, time: TimeModel)
     func addTime(_ data: TimeModel, update: Bool)
+    func getTimes(_ predicate: NSPredicate?) -> [TimeModel]?
 }

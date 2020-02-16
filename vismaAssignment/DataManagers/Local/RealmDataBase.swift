@@ -86,6 +86,16 @@ class RealmDataBase: DBDataManager {
         addToRealm(entity: entity, update: update)
     }
     
+    func getTimes(_ predicate: NSPredicate?) -> [TimeModel]? {
+        let projectsEntities = getProjectEntities(predicate)
+        guard let timesEntity = projectsEntities?.first?.times else { return nil }
+        var timeModels = [TimeModel]()
+        for time in Array(timesEntity) {
+            timeModels.append(TimeModel(entity: time))
+        }
+        return timeModels
+    }
+    
     private func getProjectEntities(_ predicate: NSPredicate?) -> [ProjectEntity]? {
         if !isRealmAccessible() { return nil }
         do {

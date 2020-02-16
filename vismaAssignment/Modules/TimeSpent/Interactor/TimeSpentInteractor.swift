@@ -22,5 +22,7 @@ class TimeSpentInteractor {
     }
     
     func loadTimes(projectId: String) {
+        guard let times = dataManager.getTimes(NSPredicate(format: "projId = %@", projectId)) else { return }
+        output?.updateTimesList(model: times)
     }
 }
