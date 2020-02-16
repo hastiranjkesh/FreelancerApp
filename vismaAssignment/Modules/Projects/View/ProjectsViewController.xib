@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProjectsViewController" customModule="vismaAssignment" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="cA4-8q-PER" id="XnW-zP-lBt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cA4-8q-PER">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="tdj-mk-fYV"/>
+                        <outlet property="delegate" destination="-1" id="Q4r-3j-1W8"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXK-a5-M9A">
+                    <rect key="frame" x="346" y="794" width="44" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="c8h-5B-oJz"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="fM6-zg-A81"/>
+                        <constraint firstAttribute="height" constant="44" id="tAD-DP-w5H"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="xSq-h2-hpq"/>
+                    </constraints>
+                    <state key="normal" image="add-project"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QXK-a5-M9A" secondAttribute="bottom" constant="24" id="0c3-b8-Ry0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cA4-8q-PER" secondAttribute="bottom" id="49P-SQ-eVw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QXK-a5-M9A" secondAttribute="trailing" constant="24" id="FfE-Hp-RU8"/>
+                <constraint firstItem="cA4-8q-PER" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Kwd-VO-94S"/>
+                <constraint firstItem="cA4-8q-PER" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ae3-SF-OQn"/>
+                <constraint firstItem="cA4-8q-PER" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wwU-nQ-LGX"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="149"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="add-project" width="46" height="46"/>
+    </resources>
+</document>
