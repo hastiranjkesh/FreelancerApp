@@ -36,6 +36,11 @@ class ProjectsPresenter {
         let entity = projects[indexPath.row]
         interactor.deleteProject(model: entity)
     }
+    
+    func projectDidSelect(indexPath: IndexPath) {
+        let entity = projects[indexPath.row]
+        router.showTimeSpentView(projectId: entity.id)
+    }
 }
 
 // MARK: - ProjectsInteractorOutput

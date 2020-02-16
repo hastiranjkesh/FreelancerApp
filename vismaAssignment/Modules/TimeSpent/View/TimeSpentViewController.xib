@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimeSpentViewController" customModule="vismaAssignment" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="kai-eU-Ouw" id="0JX-zq-aSS"/>
+                <outlet property="totalHoursLabel" destination="h2V-f4-0UI" id="qA7-LA-zRc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kai-eU-Ouw">
+                    <rect key="frame" x="0.0" y="44" width="414" height="785"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQE-e3-fIL">
+                    <rect key="frame" x="0.0" y="806" width="414" height="90"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total hours:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10V-zk-prx">
+                            <rect key="frame" x="18" y="34.5" width="97" height="21"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2V-f4-0UI">
+                            <rect key="frame" x="302" y="34.5" width="94" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="10V-zk-prx" firstAttribute="centerY" secondItem="UQE-e3-fIL" secondAttribute="centerY" id="Q4J-6U-bnY"/>
+                        <constraint firstItem="10V-zk-prx" firstAttribute="leading" secondItem="UQE-e3-fIL" secondAttribute="leading" constant="18" id="SeI-NM-1wC"/>
+                        <constraint firstAttribute="trailing" secondItem="h2V-f4-0UI" secondAttribute="trailing" constant="18" id="Snm-hd-wAm"/>
+                        <constraint firstAttribute="height" constant="90" id="ZvS-6m-bCg"/>
+                        <constraint firstItem="h2V-f4-0UI" firstAttribute="centerY" secondItem="UQE-e3-fIL" secondAttribute="centerY" id="soK-fV-fEr"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="UQE-e3-fIL" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="6rT-bZ-S4t"/>
+                <constraint firstItem="kai-eU-Ouw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="K0q-DA-fuB"/>
+                <constraint firstItem="kai-eU-Ouw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="aUL-HZ-2sV"/>
+                <constraint firstAttribute="bottom" secondItem="UQE-e3-fIL" secondAttribute="bottom" id="edm-b5-32k"/>
+                <constraint firstItem="UQE-e3-fIL" firstAttribute="top" secondItem="kai-eU-Ouw" secondAttribute="bottom" constant="-23" id="etC-DD-Vir"/>
+                <constraint firstItem="UQE-e3-fIL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hty-nb-IUf"/>
+                <constraint firstItem="kai-eU-Ouw" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="qNW-u2-NDM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="150"/>
+        </view>
+    </objects>
+</document>

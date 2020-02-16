@@ -31,4 +31,9 @@ class ProjectsRouter {
         navController.modalPresentationStyle = .fullScreen
         view?.present(navController, animated: true, completion: nil)
     }
+    
+    func showTimeSpentView(projectId: String) {
+        let timeSpentVC = TimeSpentRouter.setupModule(projectId: projectId)
+        view?.navigationController?.pushViewController(timeSpentVC, animated: true)
+    }
 }

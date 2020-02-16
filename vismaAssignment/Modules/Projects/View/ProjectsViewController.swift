@@ -45,6 +45,7 @@ final class ProjectsViewController: UIViewController {
 // MARK: - UITableViewDelegate
 extension ProjectsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.projectDidSelect(indexPath: indexPath)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle,
