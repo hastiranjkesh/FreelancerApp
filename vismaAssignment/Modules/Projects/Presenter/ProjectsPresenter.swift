@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ProjectsPresentation: class {
-    func updateProjects()
+    func updateProjectsView(showEmptyState: Bool)
 }
 
 class ProjectsPresenter {
@@ -47,6 +47,10 @@ class ProjectsPresenter {
 extension ProjectsPresenter: ProjectsInteractorOutput {
     func updateProjectsList(projects: [ProjectModel]) {
         self.projects = projects
-        view?.updateProjects()
+        var showEmptyState = false
+        if projects.count == 0 {
+            showEmptyState = true
+        }
+        view?.updateProjectsView(showEmptyState: showEmptyState)
     }
 }

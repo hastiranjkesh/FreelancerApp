@@ -11,6 +11,8 @@ import UIKit
 final class ProjectsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var emptyView: UIView!
+    
     var presenter: ProjectsPresenter
     let projectCellReuseIdentifier = "ProjectTableViewCell"
     
@@ -85,7 +87,9 @@ extension ProjectsViewController: UITableViewDataSource {
 
 // MARK: - ProjectsPresentation
 extension ProjectsViewController: ProjectsPresentation {
-    func updateProjects() {
+    func updateProjectsView(showEmptyState: Bool) {
         tableView.reloadData()
+        tableView.isHidden = showEmptyState
+        emptyView.isHidden = !showEmptyState
     }
 }

@@ -72,6 +72,13 @@ extension TimeSpentViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
+extension TimeSpentViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+}
+
 // MARK: - TimeSpentPresentation
 extension TimeSpentViewController: TimeSpentPresentation {
     func updateTimes(totalHours: String) {

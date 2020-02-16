@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProjectsViewController" customModule="vismaAssignment" customModuleProvider="target">
             <connections>
+                <outlet property="emptyView" destination="Qhy-u5-PhP" id="f32-hL-J21"/>
                 <outlet property="tableView" destination="cA4-8q-PER" id="XnW-zP-lBt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -40,6 +41,33 @@
                         <action selector="addProjectButtonTapped:" destination="-1" eventType="touchUpInside" id="3gm-8r-DZD"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qhy-u5-PhP">
+                    <rect key="frame" x="87" y="331" width="240" height="200"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No projects to show" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhW-yO-NDb">
+                            <rect key="frame" x="17.5" y="96" width="205" height="29"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-project-list" translatesAutoresizingMaskIntoConstraints="NO" id="4rJ-al-rq3">
+                            <rect key="frame" x="85" y="24" width="70" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="3YR-4T-rDL"/>
+                                <constraint firstAttribute="width" constant="70" id="7cI-e2-OYi"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="4rJ-al-rq3" firstAttribute="top" secondItem="Qhy-u5-PhP" secondAttribute="top" constant="24" id="24N-r2-eMe"/>
+                        <constraint firstItem="4rJ-al-rq3" firstAttribute="centerX" secondItem="Qhy-u5-PhP" secondAttribute="centerX" id="Qop-ss-QXg"/>
+                        <constraint firstAttribute="height" constant="200" id="T5K-bR-tjR"/>
+                        <constraint firstAttribute="width" constant="240" id="X6B-Zb-JJj"/>
+                        <constraint firstItem="nhW-yO-NDb" firstAttribute="top" secondItem="4rJ-al-rq3" secondAttribute="bottom" constant="12" id="pW4-RA-Rwt"/>
+                        <constraint firstItem="nhW-yO-NDb" firstAttribute="centerX" secondItem="4rJ-al-rq3" secondAttribute="centerX" id="rR8-KP-oZp"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -48,6 +76,8 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QXK-a5-M9A" secondAttribute="trailing" constant="24" id="FfE-Hp-RU8"/>
                 <constraint firstItem="cA4-8q-PER" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Kwd-VO-94S"/>
                 <constraint firstItem="cA4-8q-PER" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ae3-SF-OQn"/>
+                <constraint firstItem="Qhy-u5-PhP" firstAttribute="centerX" secondItem="cA4-8q-PER" secondAttribute="centerX" id="gqv-4C-lc1"/>
+                <constraint firstItem="Qhy-u5-PhP" firstAttribute="centerY" secondItem="cA4-8q-PER" secondAttribute="centerY" id="q47-SR-5Ur"/>
                 <constraint firstItem="cA4-8q-PER" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wwU-nQ-LGX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -56,5 +86,6 @@
     </objects>
     <resources>
         <image name="add-project" width="46" height="46"/>
+        <image name="empty-project-list" width="54" height="56"/>
     </resources>
 </document>
