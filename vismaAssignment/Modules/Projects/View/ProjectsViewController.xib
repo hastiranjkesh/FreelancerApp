@@ -36,6 +36,9 @@
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="xSq-h2-hpq"/>
                     </constraints>
                     <state key="normal" image="add-project"/>
+                    <connections>
+                        <action selector="addProjectButtonTapped:" destination="-1" eventType="touchUpInside" id="3gm-8r-DZD"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

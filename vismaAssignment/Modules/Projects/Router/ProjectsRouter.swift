@@ -24,4 +24,11 @@ class ProjectsRouter {
 
         return viewController
     }
+    
+    func showAddProjectView() {
+        let newProjectVC = AddProjectRouter.setupModule()
+        let navController = UINavigationController(rootViewController: newProjectVC)
+        navController.modalPresentationStyle = .fullScreen
+        view?.present(navController, animated: true, completion: nil)
+    }
 }

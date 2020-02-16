@@ -27,6 +27,10 @@ class ProjectsPresenter {
     func setupView() {
         interactor.loadProjects()
     }
+    
+    func showAddProjectView() {
+        router.showAddProjectView()
+    }
 }
 
 // MARK: - ProjectsInteractorOutput

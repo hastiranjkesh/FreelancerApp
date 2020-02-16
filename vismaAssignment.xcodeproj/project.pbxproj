@@ -21,6 +21,12 @@
 		4687B9D423F9153E00270F45 /* DBDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B9D323F9153E00270F45 /* DBDataManager.swift */; };
 		4687B9D623F9156600270F45 /* RealmDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B9D523F9156600270F45 /* RealmDataBase.swift */; };
 		4687B9D823F91A0D00270F45 /* ProjectEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B9D723F91A0D00270F45 /* ProjectEntity.swift */; };
+		4687B9DF23F91D0700270F45 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B9DD23F91D0700270F45 /* AddProjectViewController.swift */; };
+		4687B9E023F91D0700270F45 /* AddProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4687B9DE23F91D0700270F45 /* AddProjectViewController.xib */; };
+		4687B9E223F91DF500270F45 /* AddProjectPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B9E123F91DF500270F45 /* AddProjectPresenter.swift */; };
+		4687B9E423F91E7300270F45 /* AddProjectInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B9E323F91E7300270F45 /* AddProjectInteractor.swift */; };
+		4687B9E623F91EA600270F45 /* AddProjectRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B9E523F91EA600270F45 /* AddProjectRouter.swift */; };
+		4687B9E923F91F4700270F45 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B9E823F91F4700270F45 /* ViewExtension.swift */; };
 		F2A9845AA78AB312BF34BB32 /* Pods_vismaAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F269AF81555719FA3FDBD72A /* Pods_vismaAssignment.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +48,12 @@
 		4687B9D323F9153E00270F45 /* DBDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBDataManager.swift; sourceTree = "<group>"; };
 		4687B9D523F9156600270F45 /* RealmDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataBase.swift; sourceTree = "<group>"; };
 		4687B9D723F91A0D00270F45 /* ProjectEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectEntity.swift; sourceTree = "<group>"; };
+		4687B9DD23F91D0700270F45 /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
+		4687B9DE23F91D0700270F45 /* AddProjectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddProjectViewController.xib; sourceTree = "<group>"; };
+		4687B9E123F91DF500270F45 /* AddProjectPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectPresenter.swift; sourceTree = "<group>"; };
+		4687B9E323F91E7300270F45 /* AddProjectInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectInteractor.swift; sourceTree = "<group>"; };
+		4687B9E523F91EA600270F45 /* AddProjectRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectRouter.swift; sourceTree = "<group>"; };
+		4687B9E823F91F4700270F45 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		F269AF81555719FA3FDBD72A /* Pods_vismaAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vismaAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC1997136576116B72113B6 /* Pods-vismaAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vismaAssignment.release.xcconfig"; path = "Target Support Files/Pods-vismaAssignment/Pods-vismaAssignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +133,7 @@
 		4687B9B623F90EDE00270F45 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				4687B9E723F91F2900270F45 /* Extensions */,
 				4687B99D23F90B1A00270F45 /* AppDelegate.swift */,
 			);
 			path = App;
@@ -140,6 +153,10 @@
 		4687B9B823F90F6200270F45 /* AddProject */ = {
 			isa = PBXGroup;
 			children = (
+				4687B9DC23F91CD200270F45 /* Router */,
+				4687B9DB23F91CCB00270F45 /* Interactor */,
+				4687B9DA23F91CC300270F45 /* Presenter */,
+				4687B9D923F91CB900270F45 /* View */,
 			);
 			path = AddProject;
 			sourceTree = "<group>";
@@ -216,6 +233,47 @@
 				4687B9D723F91A0D00270F45 /* ProjectEntity.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		4687B9D923F91CB900270F45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4687B9DD23F91D0700270F45 /* AddProjectViewController.swift */,
+				4687B9DE23F91D0700270F45 /* AddProjectViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4687B9DA23F91CC300270F45 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4687B9E123F91DF500270F45 /* AddProjectPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4687B9DB23F91CCB00270F45 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				4687B9E323F91E7300270F45 /* AddProjectInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		4687B9DC23F91CD200270F45 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4687B9E523F91EA600270F45 /* AddProjectRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		4687B9E723F91F2900270F45 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4687B9E823F91F4700270F45 /* ViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		768CD066EE95BC6AB4A1278C /* Pods */ = {
@@ -299,6 +357,7 @@
 				4687B9AA23F90B1C00270F45 /* LaunchScreen.storyboard in Resources */,
 				4687B9C223F910E600270F45 /* ProjectsViewController.xib in Resources */,
 				4687B9A723F90B1C00270F45 /* Assets.xcassets in Resources */,
+				4687B9E023F91D0700270F45 /* AddProjectViewController.xib in Resources */,
 				4687B9C723F912DD00270F45 /* ProjectTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,11 +430,16 @@
 			files = (
 				4687B9D823F91A0D00270F45 /* ProjectEntity.swift in Sources */,
 				4687B9C923F913D800270F45 /* ProjectsPresenter.swift in Sources */,
+				4687B9E623F91EA600270F45 /* AddProjectRouter.swift in Sources */,
 				4687B9D423F9153E00270F45 /* DBDataManager.swift in Sources */,
+				4687B9DF23F91D0700270F45 /* AddProjectViewController.swift in Sources */,
 				4687B9D623F9156600270F45 /* RealmDataBase.swift in Sources */,
 				4687B9CB23F913F500270F45 /* ProjectsInteractor.swift in Sources */,
 				4687B9CF23F9147C00270F45 /* ProjectModel.swift in Sources */,
+				4687B9E423F91E7300270F45 /* AddProjectInteractor.swift in Sources */,
+				4687B9E923F91F4700270F45 /* ViewExtension.swift in Sources */,
 				4687B9CD23F9141000270F45 /* ProjectsRouter.swift in Sources */,
+				4687B9E223F91DF500270F45 /* AddProjectPresenter.swift in Sources */,
 				4687B9C123F910E600270F45 /* ProjectsViewController.swift in Sources */,
 				4687B9C623F912DD00270F45 /* ProjectTableViewCell.swift in Sources */,
 				4687B99E23F90B1A00270F45 /* AppDelegate.swift in Sources */,

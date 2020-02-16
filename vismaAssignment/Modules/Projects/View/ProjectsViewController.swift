@@ -38,6 +38,7 @@ final class ProjectsViewController: UIViewController {
     }
     
     @IBAction func addProjectButtonTapped(_ sender: Any) {
+        presenter.showAddProjectView()
     }
 }
 
