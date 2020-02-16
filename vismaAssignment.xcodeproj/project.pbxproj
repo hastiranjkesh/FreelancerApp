@@ -36,6 +36,11 @@
 		4687B9FB23F9272F00270F45 /* TimeSpentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B9FA23F9272F00270F45 /* TimeSpentRouter.swift */; };
 		4687B9FD23F9275B00270F45 /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B9FC23F9275B00270F45 /* TimeModel.swift */; };
 		4687B9FF23F9277100270F45 /* TimeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B9FE23F9277100270F45 /* TimeEntity.swift */; };
+		4687BA0623F92AF000270F45 /* AddTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687BA0423F92AF000270F45 /* AddTimeViewController.swift */; };
+		4687BA0723F92AF000270F45 /* AddTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4687BA0523F92AF000270F45 /* AddTimeViewController.xib */; };
+		4687BA0923F92B5300270F45 /* AddTimePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687BA0823F92B5300270F45 /* AddTimePresenter.swift */; };
+		4687BA0B23F92B6D00270F45 /* AddTimeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687BA0A23F92B6D00270F45 /* AddTimeInteractor.swift */; };
+		4687BA0D23F92B8100270F45 /* AddTimeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687BA0C23F92B8100270F45 /* AddTimeRouter.swift */; };
 		F2A9845AA78AB312BF34BB32 /* Pods_vismaAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F269AF81555719FA3FDBD72A /* Pods_vismaAssignment.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +77,11 @@
 		4687B9FA23F9272F00270F45 /* TimeSpentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSpentRouter.swift; sourceTree = "<group>"; };
 		4687B9FC23F9275B00270F45 /* TimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeModel.swift; sourceTree = "<group>"; };
 		4687B9FE23F9277100270F45 /* TimeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeEntity.swift; sourceTree = "<group>"; };
+		4687BA0423F92AF000270F45 /* AddTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimeViewController.swift; sourceTree = "<group>"; };
+		4687BA0523F92AF000270F45 /* AddTimeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTimeViewController.xib; sourceTree = "<group>"; };
+		4687BA0823F92B5300270F45 /* AddTimePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimePresenter.swift; sourceTree = "<group>"; };
+		4687BA0A23F92B6D00270F45 /* AddTimeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimeInteractor.swift; sourceTree = "<group>"; };
+		4687BA0C23F92B8100270F45 /* AddTimeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimeRouter.swift; sourceTree = "<group>"; };
 		F269AF81555719FA3FDBD72A /* Pods_vismaAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vismaAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC1997136576116B72113B6 /* Pods-vismaAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vismaAssignment.release.xcconfig"; path = "Target Support Files/Pods-vismaAssignment/Pods-vismaAssignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,6 +204,10 @@
 		4687B9BA23F90F8200270F45 /* AddTime */ = {
 			isa = PBXGroup;
 			children = (
+				4687BA0323F92AC900270F45 /* Router */,
+				4687BA0223F92AC200270F45 /* Interactor */,
+				4687BA0123F92ABB00270F45 /* Presenter */,
+				4687BA0023F92AB300270F45 /* View */,
 			);
 			path = AddTime;
 			sourceTree = "<group>";
@@ -335,6 +349,39 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		4687BA0023F92AB300270F45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4687BA0423F92AF000270F45 /* AddTimeViewController.swift */,
+				4687BA0523F92AF000270F45 /* AddTimeViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4687BA0123F92ABB00270F45 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4687BA0823F92B5300270F45 /* AddTimePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4687BA0223F92AC200270F45 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				4687BA0A23F92B6D00270F45 /* AddTimeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		4687BA0323F92AC900270F45 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4687BA0C23F92B8100270F45 /* AddTimeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		768CD066EE95BC6AB4A1278C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -414,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4687B9F523F9269000270F45 /* TimeSpentTableViewCell.xib in Resources */,
+				4687BA0723F92AF000270F45 /* AddTimeViewController.xib in Resources */,
 				4687B9AA23F90B1C00270F45 /* LaunchScreen.storyboard in Resources */,
 				4687B9C223F910E600270F45 /* ProjectsViewController.xib in Resources */,
 				4687B9A723F90B1C00270F45 /* Assets.xcassets in Resources */,
@@ -494,6 +542,7 @@
 				4687B9F723F9270200270F45 /* TimeSpentPresenter.swift in Sources */,
 				4687B9C923F913D800270F45 /* ProjectsPresenter.swift in Sources */,
 				4687B9E623F91EA600270F45 /* AddProjectRouter.swift in Sources */,
+				4687BA0D23F92B8100270F45 /* AddTimeRouter.swift in Sources */,
 				4687B9FF23F9277100270F45 /* TimeEntity.swift in Sources */,
 				4687B9D423F9153E00270F45 /* DBDataManager.swift in Sources */,
 				4687B9FB23F9272F00270F45 /* TimeSpentRouter.swift in Sources */,
@@ -506,9 +555,12 @@
 				4687B9E923F91F4700270F45 /* ViewExtension.swift in Sources */,
 				4687B9CD23F9141000270F45 /* ProjectsRouter.swift in Sources */,
 				4687B9E223F91DF500270F45 /* AddProjectPresenter.swift in Sources */,
+				4687BA0923F92B5300270F45 /* AddTimePresenter.swift in Sources */,
+				4687BA0623F92AF000270F45 /* AddTimeViewController.swift in Sources */,
 				4687B9C123F910E600270F45 /* ProjectsViewController.swift in Sources */,
 				4687B9C623F912DD00270F45 /* ProjectTableViewCell.swift in Sources */,
 				4687B9F923F9271B00270F45 /* TimeSpentInteractor.swift in Sources */,
+				4687BA0B23F92B6D00270F45 /* AddTimeInteractor.swift in Sources */,
 				4687B9F423F9269000270F45 /* TimeSpentTableViewCell.swift in Sources */,
 				4687B99E23F90B1A00270F45 /* AppDelegate.swift in Sources */,
 			);

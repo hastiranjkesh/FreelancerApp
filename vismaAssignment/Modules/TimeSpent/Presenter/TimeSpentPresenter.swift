@@ -31,6 +31,7 @@ class TimeSpentPresenter {
     }
     
     func showAddTimeView() {
+        router.showAddTimeView(id: projectId)
     }
     
     func generateTotalHours() -> String {

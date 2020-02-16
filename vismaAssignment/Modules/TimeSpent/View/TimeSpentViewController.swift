@@ -9,8 +9,8 @@
 import UIKit
 
 class TimeSpentViewController: UIViewController {
-
-        @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalHoursLabel: UILabel!
     
     var presenter: TimeSpentPresenter
@@ -42,9 +42,9 @@ class TimeSpentViewController: UIViewController {
     }
     
     @objc func addTime() {
+        presenter.showAddTimeView()
     }
 }
-
 
 // MARK: - UITableViewDataSource
 extension TimeSpentViewController: UITableViewDataSource {

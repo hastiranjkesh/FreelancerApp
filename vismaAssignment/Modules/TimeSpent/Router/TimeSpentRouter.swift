@@ -24,4 +24,9 @@ class TimeSpentRouter {
 
         return viewController
     }
+    
+    func showAddTimeView(id: String) {
+        let addTimeVC = AddTimeRouter.setupModule(id: id)
+        view?.navigationController?.pushViewController(addTimeVC, animated: true)
+    }
 }
