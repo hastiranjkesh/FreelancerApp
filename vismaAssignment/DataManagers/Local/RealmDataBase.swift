@@ -56,6 +56,36 @@ class RealmDataBase: DBDataManager {
         }
     }
     
+    func updateProjectWithTime(_ projectId: String, time: TimeModel) {
+        if let results = getProjectEntities(NSPredicate(format: "projId = %@", projectId)) {
+            guard let projectEntity = Array(results).first else { return }
+            if !isRealmAccessible() { return }
+            
+            do {
+                let realm = try Realm()
+                realm.refresh()
+                addTime(time, update: true)
+                let timeEntity = TimeEntity(model: time)
+                
+                if realm.isInWriteTransaction {
+                    projectEntity.times.append(timeEntity)
+                } else {
+                    try? realm.write {
+                        projectEntity.times.append(timeEntity)
+                    }
+                }
+            } catch let error {
+                print("Realm: Something went wrong with error: \(error)")
+            }
+        }
+    }
+    
+    func addTime(_ data: TimeModel, update: Bool) {
+        if !isRealmAccessible() { return }
+        let entity = TimeEntity(model: data)
+        addToRealm(entity: entity, update: update)
+    }
+    
     private func getProjectEntities(_ predicate: NSPredicate?) -> [ProjectEntity]? {
         if !isRealmAccessible() { return nil }
         do {
