@@ -7,5 +7,6 @@ target 'vismaAssignment' do
 
   # Pods for vismaAssignment
   pod 'SwiftLint'
+  pod 'RealmSwift'
 
 end

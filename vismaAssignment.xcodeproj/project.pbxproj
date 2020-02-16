@@ -3,13 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4687B99E23F90B1A00270F45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B99D23F90B1A00270F45 /* AppDelegate.swift */; };
 		4687B9A723F90B1C00270F45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4687B9A623F90B1C00270F45 /* Assets.xcassets */; };
 		4687B9AA23F90B1C00270F45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4687B9A823F90B1C00270F45 /* LaunchScreen.storyboard */; };
+		4687B9C123F910E600270F45 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B9BF23F910E600270F45 /* ProjectsViewController.swift */; };
+		4687B9C223F910E600270F45 /* ProjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4687B9C023F910E600270F45 /* ProjectsViewController.xib */; };
+		4687B9C623F912DD00270F45 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B9C423F912DD00270F45 /* ProjectTableViewCell.swift */; };
+		4687B9C723F912DD00270F45 /* ProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4687B9C523F912DD00270F45 /* ProjectTableViewCell.xib */; };
+		4687B9C923F913D800270F45 /* ProjectsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B9C823F913D800270F45 /* ProjectsPresenter.swift */; };
+		4687B9CB23F913F500270F45 /* ProjectsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B9CA23F913F500270F45 /* ProjectsInteractor.swift */; };
+		4687B9CD23F9141000270F45 /* ProjectsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B9CC23F9141000270F45 /* ProjectsRouter.swift */; };
+		4687B9CF23F9147C00270F45 /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B9CE23F9147C00270F45 /* ProjectModel.swift */; };
+		4687B9D423F9153E00270F45 /* DBDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B9D323F9153E00270F45 /* DBDataManager.swift */; };
+		4687B9D623F9156600270F45 /* RealmDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B9D523F9156600270F45 /* RealmDataBase.swift */; };
+		4687B9D823F91A0D00270F45 /* ProjectEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B9D723F91A0D00270F45 /* ProjectEntity.swift */; };
 		F2A9845AA78AB312BF34BB32 /* Pods_vismaAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F269AF81555719FA3FDBD72A /* Pods_vismaAssignment.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +31,17 @@
 		4687B9A623F90B1C00270F45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4687B9A923F90B1C00270F45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4687B9AB23F90B1C00270F45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4687B9BF23F910E600270F45 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
+		4687B9C023F910E600270F45 /* ProjectsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectsViewController.xib; sourceTree = "<group>"; };
+		4687B9C423F912DD00270F45 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
+		4687B9C523F912DD00270F45 /* ProjectTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectTableViewCell.xib; sourceTree = "<group>"; };
+		4687B9C823F913D800270F45 /* ProjectsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsPresenter.swift; sourceTree = "<group>"; };
+		4687B9CA23F913F500270F45 /* ProjectsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsInteractor.swift; sourceTree = "<group>"; };
+		4687B9CC23F9141000270F45 /* ProjectsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsRouter.swift; sourceTree = "<group>"; };
+		4687B9CE23F9147C00270F45 /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
+		4687B9D323F9153E00270F45 /* DBDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBDataManager.swift; sourceTree = "<group>"; };
+		4687B9D523F9156600270F45 /* RealmDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataBase.swift; sourceTree = "<group>"; };
+		4687B9D723F91A0D00270F45 /* ProjectEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectEntity.swift; sourceTree = "<group>"; };
 		F269AF81555719FA3FDBD72A /* Pods_vismaAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vismaAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC1997136576116B72113B6 /* Pods-vismaAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vismaAssignment.release.xcconfig"; path = "Target Support Files/Pods-vismaAssignment/Pods-vismaAssignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +104,7 @@
 		4687B9B423F90ECF00270F45 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4687B9CE23F9147C00270F45 /* ProjectModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -89,6 +112,8 @@
 		4687B9B523F90ED500270F45 /* DataManagers */ = {
 			isa = PBXGroup;
 			children = (
+				4687B9D123F914B100270F45 /* Local */,
+				4687B9D023F914A400270F45 /* Api */,
 			);
 			path = DataManagers;
 			sourceTree = "<group>";
@@ -104,6 +129,10 @@
 		4687B9B723F90F4600270F45 /* Projects */ = {
 			isa = PBXGroup;
 			children = (
+				4687B9BE23F910C800270F45 /* Router */,
+				4687B9BD23F910C200270F45 /* Interactor */,
+				4687B9BC23F910BC00270F45 /* Presenter */,
+				4687B9BB23F910B500270F45 /* View */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -127,6 +156,66 @@
 			children = (
 			);
 			path = AddTime;
+			sourceTree = "<group>";
+		};
+		4687B9BB23F910B500270F45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4687B9BF23F910E600270F45 /* ProjectsViewController.swift */,
+				4687B9C023F910E600270F45 /* ProjectsViewController.xib */,
+				4687B9C423F912DD00270F45 /* ProjectTableViewCell.swift */,
+				4687B9C523F912DD00270F45 /* ProjectTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4687B9BC23F910BC00270F45 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4687B9C823F913D800270F45 /* ProjectsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4687B9BD23F910C200270F45 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				4687B9CA23F913F500270F45 /* ProjectsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		4687B9BE23F910C800270F45 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4687B9CC23F9141000270F45 /* ProjectsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		4687B9D023F914A400270F45 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		4687B9D123F914B100270F45 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				4687B9D223F914C100270F45 /* Entities */,
+				4687B9D323F9153E00270F45 /* DBDataManager.swift */,
+				4687B9D523F9156600270F45 /* RealmDataBase.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		4687B9D223F914C100270F45 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				4687B9D723F91A0D00270F45 /* ProjectEntity.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		768CD066EE95BC6AB4A1278C /* Pods */ = {
@@ -157,6 +246,8 @@
 				4687B99623F90B1A00270F45 /* Sources */,
 				4687B99723F90B1A00270F45 /* Frameworks */,
 				4687B99823F90B1A00270F45 /* Resources */,
+				4687B9C323F9110900270F45 /* ShellScript */,
+				D6E06DCB5008C477502DD199 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -206,13 +297,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				4687B9AA23F90B1C00270F45 /* LaunchScreen.storyboard in Resources */,
+				4687B9C223F910E600270F45 /* ProjectsViewController.xib in Resources */,
 				4687B9A723F90B1C00270F45 /* Assets.xcassets in Resources */,
+				4687B9C723F912DD00270F45 /* ProjectTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4687B9C323F9110900270F45 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		62F72EBBBC05927D6699702E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,6 +345,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D6E06DCB5008C477502DD199 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-vismaAssignment/Pods-vismaAssignment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-vismaAssignment/Pods-vismaAssignment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-vismaAssignment/Pods-vismaAssignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -242,6 +369,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4687B9D823F91A0D00270F45 /* ProjectEntity.swift in Sources */,
+				4687B9C923F913D800270F45 /* ProjectsPresenter.swift in Sources */,
+				4687B9D423F9153E00270F45 /* DBDataManager.swift in Sources */,
+				4687B9D623F9156600270F45 /* RealmDataBase.swift in Sources */,
+				4687B9CB23F913F500270F45 /* ProjectsInteractor.swift in Sources */,
+				4687B9CF23F9147C00270F45 /* ProjectModel.swift in Sources */,
+				4687B9CD23F9141000270F45 /* ProjectsRouter.swift in Sources */,
+				4687B9C123F910E600270F45 /* ProjectsViewController.swift in Sources */,
+				4687B9C623F912DD00270F45 /* ProjectTableViewCell.swift in Sources */,
 				4687B99E23F90B1A00270F45 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
