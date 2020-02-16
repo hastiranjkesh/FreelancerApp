@@ -35,6 +35,41 @@ class RealmDataBase: DBDataManager {
         addToRealm(entity: entity, update: update)
     }
     
+    func deleteProject(_ data: ProjectModel, completion: @escaping () -> Void) {
+        if !isRealmAccessible() { return }
+        do {
+            guard let project = getProjectEntities(NSPredicate(format: "projId = %@", data.id)) else { return }
+            let realm = try Realm()
+            realm.refresh()
+            
+            if realm.isInWriteTransaction {
+                realm.delete(project)
+                completion()
+            } else {
+                try? realm.write {
+                    realm.delete(project)
+                    completion()
+                }
+            }
+        } catch let error {
+            print("Realm: Something went wrong with error: \(error)")
+        }
+    }
+    
+    private func getProjectEntities(_ predicate: NSPredicate?) -> [ProjectEntity]? {
+        if !isRealmAccessible() { return nil }
+        do {
+            let realm = try Realm()
+            realm.refresh()
+            let projects = predicate == nil ? realm.objects(ProjectEntity.self) :
+                realm.objects(ProjectEntity.self).filter(predicate!)
+            return projects.toArray()
+        } catch {
+            print("Realm: Something went wrong with error: \(error)")
+        }
+        return nil
+    }
+    
     private func addToRealm<T: Object>(entity: T, update: Bool) {
         do {
             let realm = try Realm()

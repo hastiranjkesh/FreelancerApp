@@ -9,14 +9,14 @@
 import UIKit
 
 final class ProjectTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var projectNameLabel: UILabel!
     @IBOutlet weak var totalHoursLabel: UILabel!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+    
     func configure(name: String, hours: String) {
         projectNameLabel.text = name
         totalHoursLabel.text = hours

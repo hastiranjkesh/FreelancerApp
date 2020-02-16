@@ -13,23 +13,28 @@ protocol ProjectsPresentation: class {
 }
 
 class ProjectsPresenter {
-
+    
     var interactor: ProjectsInteractor
     var router: ProjectsRouter
     weak var view: ProjectsPresentation?
     var projects = [ProjectModel]()
-
+    
     init(interactor: ProjectsInteractor, router: ProjectsRouter) {
         self.interactor = interactor
         self.router = router
     }
-
+    
     func setupView() {
         interactor.loadProjects()
     }
     
     func showAddProjectView() {
         router.showAddProjectView()
+    }
+    
+    func deleteProject(indexPath: IndexPath) {
+        let entity = projects[indexPath.row]
+        interactor.deleteProject(model: entity)
     }
 }
 

@@ -24,4 +24,10 @@ class ProjectsInteractor {
         guard let projects = dataManager.getProjects(nil) else { return }
         output?.updateProjectsList(projects: projects)
     }
+    
+    func deleteProject(model: ProjectModel) {
+        dataManager.deleteProject(model) { [weak self] in
+            self?.loadProjects()
+        }
+    }
 }
