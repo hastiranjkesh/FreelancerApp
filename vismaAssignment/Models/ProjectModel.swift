@@ -19,5 +19,8 @@ extension ProjectModel {
         name = entity.name
         id = entity.projId
         hours = 0.0
+        for time in entity.times {
+            hours += time.hours
+        }
     }
 }

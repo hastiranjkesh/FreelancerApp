@@ -14,6 +14,7 @@ class TimeEntity: Object {
     @objc dynamic var date: Date = Date()
     @objc dynamic var hours: Double = 0.0
     @objc dynamic var timeId: PrimaryKeyType = UUID().uuidString
+    let project = LinkingObjects(fromType: ProjectEntity.self, property: "times")
     
     override class func primaryKey() -> String? {
         return "timeId"
@@ -29,4 +30,3 @@ extension TimeEntity {
         hours = model.hours
     }
 }
-

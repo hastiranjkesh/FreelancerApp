@@ -14,6 +14,7 @@ class ProjectEntity: Object {
     @objc dynamic var name: String = ""
     @objc dynamic var customerPhone: String = ""
     @objc dynamic var projId: PrimaryKeyType = UUID().uuidString
+    let times = List<TimeEntity>()
     
     override class func primaryKey() -> String? {
         return "projId"

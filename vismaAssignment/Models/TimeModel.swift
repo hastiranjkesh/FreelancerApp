@@ -18,6 +18,6 @@ extension TimeModel {
     init(entity: TimeEntity) {
         date = entity.date
         hours = entity.hours
-        projectId = ""
+        projectId = entity.project.first?.projId ?? ""
     }
 }
