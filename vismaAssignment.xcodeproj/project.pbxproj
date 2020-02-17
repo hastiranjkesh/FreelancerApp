@@ -14,6 +14,8 @@
 		465A9AF423FA7AA600975305 /* ProjectsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A9AF323FA7AA600975305 /* ProjectsPresenterTests.swift */; };
 		465A9AF723FA7B2600975305 /* TimeSpentInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A9AF623FA7B2600975305 /* TimeSpentInteractorTests.swift */; };
 		465A9AF923FA7B4200975305 /* TimeSpentPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A9AF823FA7B4200975305 /* TimeSpentPresenterTests.swift */; };
+		465A9AFC23FADBEA00975305 /* AddTimeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A9AFB23FADBEA00975305 /* AddTimeInteractorTests.swift */; };
+		465A9AFE23FAE01500975305 /* AddTimePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A9AFD23FAE01500975305 /* AddTimePresenterTests.swift */; };
 		4687B99E23F90B1A00270F45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B99D23F90B1A00270F45 /* AppDelegate.swift */; };
 		4687B9A723F90B1C00270F45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4687B9A623F90B1C00270F45 /* Assets.xcassets */; };
 		4687B9AA23F90B1C00270F45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4687B9A823F90B1C00270F45 /* LaunchScreen.storyboard */; };
@@ -72,6 +74,8 @@
 		465A9AF323FA7AA600975305 /* ProjectsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsPresenterTests.swift; sourceTree = "<group>"; };
 		465A9AF623FA7B2600975305 /* TimeSpentInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSpentInteractorTests.swift; sourceTree = "<group>"; };
 		465A9AF823FA7B4200975305 /* TimeSpentPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSpentPresenterTests.swift; sourceTree = "<group>"; };
+		465A9AFB23FADBEA00975305 /* AddTimeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimeInteractorTests.swift; sourceTree = "<group>"; };
+		465A9AFD23FAE01500975305 /* AddTimePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimePresenterTests.swift; sourceTree = "<group>"; };
 		4687B99A23F90B1A00270F45 /* vismaAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vismaAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4687B99D23F90B1A00270F45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4687B9A623F90B1C00270F45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 		465A9ADF23FA797400975305 /* vismaAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
+				465A9AFA23FADBC300975305 /* AddTimeTests */,
 				465A9AF523FA7B1400975305 /* TimeSpentTests */,
 				465A9AF023FA7A7400975305 /* ProjectListTests */,
 				465A9AEB23FA79BF00975305 /* ModelTests */,
@@ -176,6 +181,15 @@
 				465A9AF823FA7B4200975305 /* TimeSpentPresenterTests.swift */,
 			);
 			path = TimeSpentTests;
+			sourceTree = "<group>";
+		};
+		465A9AFA23FADBC300975305 /* AddTimeTests */ = {
+			isa = PBXGroup;
+			children = (
+				465A9AFB23FADBEA00975305 /* AddTimeInteractorTests.swift */,
+				465A9AFD23FAE01500975305 /* AddTimePresenterTests.swift */,
+			);
+			path = AddTimeTests;
 			sourceTree = "<group>";
 		};
 		4687B99123F90B1A00270F45 = {
@@ -654,7 +668,9 @@
 				465A9AEA23FA799B00975305 /* FakeDBDataManager.swift in Sources */,
 				465A9AEF23FA79F200975305 /* TimeModelTest.swift in Sources */,
 				465A9AF923FA7B4200975305 /* TimeSpentPresenterTests.swift in Sources */,
+				465A9AFC23FADBEA00975305 /* AddTimeInteractorTests.swift in Sources */,
 				465A9AF723FA7B2600975305 /* TimeSpentInteractorTests.swift in Sources */,
+				465A9AFE23FAE01500975305 /* AddTimePresenterTests.swift in Sources */,
 				465A9AED23FA79D200975305 /* ProjectModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
