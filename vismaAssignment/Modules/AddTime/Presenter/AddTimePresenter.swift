@@ -54,7 +54,7 @@ class AddTimePresenter {
     }
     
     private func validateUserInputs(hours: String?) -> Bool {
-        if let text = hours, !text.isEmpty {
+        if let text = hours, !text.isEmpty, text != "0.0" {
             return true
         }
         return false
