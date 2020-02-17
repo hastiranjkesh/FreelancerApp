@@ -12,9 +12,9 @@ class AddTimeRouter {
     weak var view: UIViewController?
 
        static func setupModule(id: String) -> AddTimeViewController {
-        let interactor = AddTimeInteractor(dataManager: RealmDataBase())
+        let interactor = AddTimeInteractor(dataManager: RealmDataBase(), id: id)
            let router = AddTimeRouter()
-           let presenter = AddTimePresenter(interactor: interactor, router: router, id: id)
+           let presenter = AddTimePresenter(interactor: interactor, router: router)
            let viewController = AddTimeViewController(presenter: presenter)
 
            presenter.view = viewController

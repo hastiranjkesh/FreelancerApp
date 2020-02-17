@@ -74,7 +74,7 @@ extension AddTimeViewController: AddTimePresentation {
         hoursTextField.shake()
     }
     
-    func updateHours(hour: String) {
+    func updateHoursView(hour: String) {
         hoursLabel.text = hour
     }
 }

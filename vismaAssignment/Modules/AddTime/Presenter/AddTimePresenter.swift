@@ -10,26 +10,17 @@ import Foundation
 
 protocol AddTimePresentation: class {
     func showHoursError()
-    func updateHours(hour: String)
+    func updateHoursView(hour: String)
 }
 
 class AddTimePresenter {
     var interactor: AddTimeInteractor
     var router: AddTimeRouter
     weak var view: AddTimePresentation?
-    var projectId: String
-    var time: Float = 0.0
-    var hoursValue: Float = 0 {
-        didSet { produceHoursText() }
-    }
-    var minutesValue: Float = 0 {
-        didSet { produceHoursText() }
-    }
     
-    init(interactor: AddTimeInteractor, router: AddTimeRouter, id: String) {
+    init(interactor: AddTimeInteractor, router: AddTimeRouter) {
         self.interactor = interactor
         self.router = router
-        self.projectId = id
     }
     
     func getFormatedDate(date: Date) -> String {
@@ -40,14 +31,9 @@ class AddTimePresenter {
     
     func saveTime(date: Date, hours: String?) {
         if validateUserInputs(hours: hours) {
-            if let hoursValue = hours {
-                if let hoursValue = Double(hoursValue) {
-                    let timeModel = TimeModel(date: date, hours: hoursValue,
-                                              projectId: projectId, timeId: UUID().uuidString)
-                    interactor.saveTime(time: timeModel)
-                }
+            if let hoursStr = hours, let hoursValue = Double(hoursStr) {
+                interactor.saveTime(date: date, hours: hoursValue)
             }
-            
         } else {
             view?.showHoursError()
         }
@@ -60,17 +46,12 @@ class AddTimePresenter {
         return false
     }
     
-    private func produceHoursText() {
-        time = hoursValue + round((minutesValue/60)*100)/100
-        view?.updateHours(hour: "\(time)")
-    }
-    
     func updateHourValue(hour: String) {
-        hoursValue = hour.isEmpty ? 0 : Float(hour) ?? 0
+        interactor.updateHourValue(hour: hour)
     }
     
     func updateMinuteValue(min: String) {
-        minutesValue = min.isEmpty ? 0 : Float(min) ?? 0
+        interactor.updateMinuteValue(min: min)
     }
 }
 
@@ -78,5 +59,9 @@ class AddTimePresenter {
 extension AddTimePresenter: AddTimeInteractorOutput {
     func updateTimes() {
         router.closeAddTimeView()
+    }
+    
+    func updateHours(hour: String) {
+        view?.updateHoursView(hour: hour)
     }
 }
