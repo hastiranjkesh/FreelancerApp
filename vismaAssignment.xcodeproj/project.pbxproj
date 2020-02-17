@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		465A9AEA23FA799B00975305 /* FakeDBDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A9AE923FA799B00975305 /* FakeDBDataManager.swift */; };
+		465A9AED23FA79D200975305 /* ProjectModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A9AEC23FA79D200975305 /* ProjectModelTest.swift */; };
+		465A9AEF23FA79F200975305 /* TimeModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A9AEE23FA79F200975305 /* TimeModelTest.swift */; };
 		4687B99E23F90B1A00270F45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B99D23F90B1A00270F45 /* AppDelegate.swift */; };
 		4687B9A723F90B1C00270F45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4687B9A623F90B1C00270F45 /* Assets.xcassets */; };
 		4687B9AA23F90B1C00270F45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4687B9A823F90B1C00270F45 /* LaunchScreen.storyboard */; };
@@ -44,8 +47,23 @@
 		F2A9845AA78AB312BF34BB32 /* Pods_vismaAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F269AF81555719FA3FDBD72A /* Pods_vismaAssignment.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		465A9AE323FA797400975305 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4687B99223F90B1A00270F45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4687B99923F90B1A00270F45;
+			remoteInfo = vismaAssignment;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		31E5AAEC846C252B3F0F6EDD /* Pods-vismaAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vismaAssignment.debug.xcconfig"; path = "Target Support Files/Pods-vismaAssignment/Pods-vismaAssignment.debug.xcconfig"; sourceTree = "<group>"; };
+		465A9ADE23FA797400975305 /* vismaAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vismaAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		465A9AE223FA797400975305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		465A9AE923FA799B00975305 /* FakeDBDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDBDataManager.swift; sourceTree = "<group>"; };
+		465A9AEC23FA79D200975305 /* ProjectModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModelTest.swift; sourceTree = "<group>"; };
+		465A9AEE23FA79F200975305 /* TimeModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeModelTest.swift; sourceTree = "<group>"; };
 		4687B99A23F90B1A00270F45 /* vismaAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vismaAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4687B99D23F90B1A00270F45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4687B9A623F90B1C00270F45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,6 +105,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		465A9ADB23FA797400975305 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4687B99723F90B1A00270F45 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -98,10 +123,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		465A9ADF23FA797400975305 /* vismaAssignmentTests */ = {
+			isa = PBXGroup;
+			children = (
+				465A9AEB23FA79BF00975305 /* ModelTests */,
+				465A9AE823FA797E00975305 /* Mock */,
+				465A9AE223FA797400975305 /* Info.plist */,
+			);
+			path = vismaAssignmentTests;
+			sourceTree = "<group>";
+		};
+		465A9AE823FA797E00975305 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				465A9AE923FA799B00975305 /* FakeDBDataManager.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		465A9AEB23FA79BF00975305 /* ModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				465A9AEC23FA79D200975305 /* ProjectModelTest.swift */,
+				465A9AEE23FA79F200975305 /* TimeModelTest.swift */,
+			);
+			path = ModelTests;
+			sourceTree = "<group>";
+		};
 		4687B99123F90B1A00270F45 = {
 			isa = PBXGroup;
 			children = (
 				4687B99C23F90B1A00270F45 /* vismaAssignment */,
+				465A9ADF23FA797400975305 /* vismaAssignmentTests */,
 				4687B99B23F90B1A00270F45 /* Products */,
 				768CD066EE95BC6AB4A1278C /* Pods */,
 				B6A32A2F4545503E9B4BCB8C /* Frameworks */,
@@ -112,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				4687B99A23F90B1A00270F45 /* vismaAssignment.app */,
+				465A9ADE23FA797400975305 /* vismaAssignmentTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -402,6 +456,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		465A9ADD23FA797400975305 /* vismaAssignmentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 465A9AE523FA797400975305 /* Build configuration list for PBXNativeTarget "vismaAssignmentTests" */;
+			buildPhases = (
+				465A9ADA23FA797400975305 /* Sources */,
+				465A9ADB23FA797400975305 /* Frameworks */,
+				465A9ADC23FA797400975305 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				465A9AE423FA797400975305 /* PBXTargetDependency */,
+			);
+			name = vismaAssignmentTests;
+			productName = vismaAssignmentTests;
+			productReference = 465A9ADE23FA797400975305 /* vismaAssignmentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4687B99923F90B1A00270F45 /* vismaAssignment */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4687B9AE23F90B1C00270F45 /* Build configuration list for PBXNativeTarget "vismaAssignment" */;
@@ -432,6 +504,10 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = visma;
 				TargetAttributes = {
+					465A9ADD23FA797400975305 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 4687B99923F90B1A00270F45;
+					};
 					4687B99923F90B1A00270F45 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
@@ -451,11 +527,19 @@
 			projectRoot = "";
 			targets = (
 				4687B99923F90B1A00270F45 /* vismaAssignment */,
+				465A9ADD23FA797400975305 /* vismaAssignmentTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		465A9ADC23FA797400975305 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4687B99823F90B1A00270F45 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -533,6 +617,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		465A9ADA23FA797400975305 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				465A9AEA23FA799B00975305 /* FakeDBDataManager.swift in Sources */,
+				465A9AEF23FA79F200975305 /* TimeModelTest.swift in Sources */,
+				465A9AED23FA79D200975305 /* ProjectModelTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4687B99623F90B1A00270F45 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -568,6 +662,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		465A9AE423FA797400975305 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4687B99923F90B1A00270F45 /* vismaAssignment */;
+			targetProxy = 465A9AE323FA797400975305 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		4687B9A823F90B1C00270F45 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -580,6 +682,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		465A9AE623FA797400975305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = vismaAssignmentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = visma.com.vismaAssignmentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vismaAssignment.app/vismaAssignment";
+			};
+			name = Debug;
+		};
+		465A9AE723FA797400975305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = vismaAssignmentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = visma.com.vismaAssignmentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vismaAssignment.app/vismaAssignment";
+			};
+			name = Release;
+		};
 		4687B9AC23F90B1C00270F45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -733,6 +873,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		465A9AE523FA797400975305 /* Build configuration list for PBXNativeTarget "vismaAssignmentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				465A9AE623FA797400975305 /* Debug */,
+				465A9AE723FA797400975305 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4687B99523F90B1A00270F45 /* Build configuration list for PBXProject "vismaAssignment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

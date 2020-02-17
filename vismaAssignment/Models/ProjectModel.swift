@@ -24,3 +24,12 @@ extension ProjectModel {
         }
     }
 }
+
+//For testing purpose
+extension ProjectModel: Equatable {
+    static func == (lhs: ProjectModel, rhs: ProjectModel) -> Bool {
+        return lhs.name == rhs.name &&
+            lhs.hours == rhs.hours &&
+            lhs.id == rhs.id
+    }
+}
