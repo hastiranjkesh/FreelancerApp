@@ -49,7 +49,7 @@ class AddTimeViewController: UIViewController {
         hoursTextField.rx.text
             .orEmpty
             .distinctUntilChanged()
-            .debounce(.milliseconds(1000), scheduler: MainScheduler.instance)
+            .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] hours in
                 self?.presenter.updateHourValue(hour: hours)
             }).disposed(by: disposeBag)
@@ -57,14 +57,14 @@ class AddTimeViewController: UIViewController {
         minutesTextField.rx.text
             .orEmpty
             .distinctUntilChanged()
-            .debounce(.milliseconds(1000), scheduler: MainScheduler.instance)
+            .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] min in
                 self?.presenter.updateMinuteValue(min: min)
             }).disposed(by: disposeBag)
     }
     
     @objc func saveTime() {
-        presenter.saveTime(date: datePicker.date, hours: hoursTextField.text)
+        presenter.saveTime(date: datePicker.date, hours: hoursLabel.text)
     }
 }
 

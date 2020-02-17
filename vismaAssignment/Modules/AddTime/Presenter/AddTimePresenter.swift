@@ -18,15 +18,12 @@ class AddTimePresenter {
     var router: AddTimeRouter
     weak var view: AddTimePresentation?
     var projectId: String
+    var time: Float = 0.0
     var hoursValue: Float = 0 {
-        didSet {
-            produceHoursText()
-        }
+        didSet { produceHoursText() }
     }
     var minutesValue: Float = 0 {
-        didSet {
-            produceHoursText()
-        }
+        didSet { produceHoursText() }
     }
     
     init(interactor: AddTimeInteractor, router: AddTimeRouter, id: String) {
@@ -63,8 +60,8 @@ class AddTimePresenter {
     }
     
     private func produceHoursText() {
-        let hour: Float = hoursValue + round((minutesValue/60)*100)/100
-        view?.updateHours(hour: "\(hour)")
+        time = hoursValue + round((minutesValue/60)*100)/100
+        view?.updateHours(hour: "\(time)")
     }
     
     func updateHourValue(hour: String) {
