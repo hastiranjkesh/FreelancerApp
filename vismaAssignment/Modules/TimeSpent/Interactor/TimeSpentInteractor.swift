@@ -30,7 +30,7 @@ class TimeSpentInteractor {
         output?.updateTimesList(model: times)
     }
     
-    func deleteProject(model: TimeModel) {
+    func deleteTime(model: TimeModel) {
         dataManager.deleteTime(model) {[weak self] in
             self?.loadTimes()
         }

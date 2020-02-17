@@ -24,6 +24,7 @@ class FakeDBDataManager: DBDataManager {
     }
     
     func deleteProject(_ data: ProjectModel, completion: @escaping () -> Void) {
+        completion()
     }
     
     func updateProjectWithTime(_ projectId: String, time: TimeModel) {
@@ -46,5 +47,6 @@ class FakeDBDataManager: DBDataManager {
     }
     
     func deleteTime(_ data: TimeModel, completion: @escaping () -> Void) {
+        completion()
     }
 }

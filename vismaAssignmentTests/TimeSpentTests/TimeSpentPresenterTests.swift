@@ -30,6 +30,9 @@ class TimeSpentPresenterTests: XCTestCase {
                                                  projectId: "1234", projectName: "project1")
     var mockPresentation: MockTimeSpentPresentation?
     let mockRouter = MockTimeSpentRouter()
+    let fakeTimes = [TimeModel(date: Date(), hours: 6.0, projectId: "1234", timeId: "abcd"),
+                     TimeModel(date: Date(), hours: 4.5, projectId: "1234", timeId: "abce"),
+                     TimeModel(date: Date(), hours: 9.75, projectId: "1234", timeId: "abcf")]
     
     override func setUp() {
         presenter = TimeSpentPresenter(interactor: mockInteractor, router: mockRouter)
@@ -54,5 +57,11 @@ class TimeSpentPresenterTests: XCTestCase {
             return
         }
         XCTAssertEqual(totalHours, "24.0 hours")
+    }
+    
+    func testGenerateTotalHoursSuccessfully() {
+        presenter?.times = fakeTimes
+        let res = presenter?.generateTotalHours()
+        XCTAssertEqual("\(20.25) hours", res)
     }
 }

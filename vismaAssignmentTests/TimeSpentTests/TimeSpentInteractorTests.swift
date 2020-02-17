@@ -23,9 +23,11 @@ class TimeSpentInteractorTests: XCTestCase {
     var subject: TimeSpentInteractor?
     let interactorOutput = MockTimeSpentInteractorOutput()
     let fakeDataManager = FakeDBDataManager()
+    var projectId = "1234"
+    var projectName = "Sample Project1"
     
     override func setUp() {
-        subject = TimeSpentInteractor(dataManager: fakeDataManager, projectId: "1234", projectName: "project1")
+        subject = TimeSpentInteractor(dataManager: fakeDataManager, projectId: projectId, projectName: projectName)
         subject?.output = interactorOutput
     }
     
@@ -36,7 +38,26 @@ class TimeSpentInteractorTests: XCTestCase {
     
     func test_GetTimesForSpecificProject_CheckId() {
         subject?.loadTimes()
-        XCTAssertEqual(interactorOutput.times?.first?.projectId, "1234")
+        XCTAssertEqual(interactorOutput.times?.first?.projectId, projectId)
+    }
+    
+    func test_DeleteTimeSuccessfully_CatchInInteractorOutput() {
+        subject?.deleteTime(model: TimeModel(date: Date(), hours: 6.0, projectId: projectId, timeId: "abcd"))
+        guard let count = interactorOutput.times?.count else {
+            XCTFail("Delete Failed")
+            return
+        }
+        XCTAssertTrue(count > 0)
+    }
+    
+    func testGetProjectIdSuccessfully() {
+        let id = subject?.getProjectId()
+        XCTAssertEqual(id, projectId)
+    }
+    
+    func testGetProjectNameSuccessfully() {
+        let name = subject?.getProjectName()
+        XCTAssertEqual(name, projectName)
     }
     
     override func tearDown() {

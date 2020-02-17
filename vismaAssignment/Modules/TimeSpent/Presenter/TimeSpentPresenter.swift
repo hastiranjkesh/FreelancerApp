@@ -47,7 +47,7 @@ class TimeSpentPresenter {
     }
     
     func deleteTime(indexPath: IndexPath) {
-        interactor.deleteProject(model: times[indexPath.row])
+        interactor.deleteTime(model: times[indexPath.row])
     }
     
     func getProjectName() -> String {

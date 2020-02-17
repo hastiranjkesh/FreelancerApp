@@ -55,6 +55,15 @@ class ProjectsInteractorTests: XCTestCase {
         XCTAssertEqual(StubProjectListResult.projects, projects)
     }
     
+    func test_DeleteProjectSuccessfully_CatchInInteractorOutput() {
+        subject?.deleteProject(model: ProjectModel(name: "project1", hours: 25, id: "1234"))
+        guard let count = interactorOutput.projects?.count else {
+            XCTFail("Delete Failed")
+            return
+        }
+        XCTAssertTrue(count > 0)
+    }
+    
     override func tearDown() {
         super.tearDown()
     }
