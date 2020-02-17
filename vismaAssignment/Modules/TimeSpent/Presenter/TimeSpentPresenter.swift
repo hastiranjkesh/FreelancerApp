@@ -41,6 +41,12 @@ class TimeSpentPresenter {
         }
         return "\(totalHours) hours"
     }
+    
+    func getFormatedDate(date: Date) -> String {
+        let formater = DateFormatter()
+        formater.dateFormat = "EEEE MMMM dd Y"
+        return formater.string(from: date)
+    }
 }
 
 // MARK: - TimeSpentInteractorOutput

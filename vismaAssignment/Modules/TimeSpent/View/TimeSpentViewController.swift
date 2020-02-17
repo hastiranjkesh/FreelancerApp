@@ -65,9 +65,7 @@ extension TimeSpentViewController: UITableViewDataSource {
                 return UITableViewCell()
         }
         let time = presenter.times[indexPath.row]
-        let formater = DateFormatter()
-        formater.dateFormat = "EEEE MMMM dd Y"
-        cell.configure(date: formater.string(from: time.date), hours: "\(time.hours)")
+        cell.configure(date: presenter.getFormatedDate(date: time.date), hours: "\(time.hours)")
         return cell
     }
 }
