@@ -42,4 +42,3 @@ class FakeDBDataManager: DBDataManager {
         return times
     }
 }
-

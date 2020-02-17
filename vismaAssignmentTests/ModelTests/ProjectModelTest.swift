@@ -18,4 +18,3 @@ class ProjectModelTest: XCTestCase {
         XCTAssertEqual(project.id, "1234")
     }
 }
-

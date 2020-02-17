@@ -59,4 +59,3 @@ class ProjectsInteractorTests: XCTestCase {
         super.tearDown()
     }
 }
-

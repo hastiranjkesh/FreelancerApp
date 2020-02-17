@@ -74,4 +74,3 @@ class ProjectsPresenterTests: XCTestCase {
         super.tearDown()
     }
 }
-
