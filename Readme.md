@@ -20,20 +20,30 @@ I defined entities outside the VIPER module structure (in the DataManager layer)
  **Advantages of using VIPER**
  
  Simplicity - for large teams on complex projects
+ 
  Scalability - simultaneous work seamlessly
+ 
  Reusability - decoupled app components based on roles
+ 
  Consistency - module skeletons, separation of concerns
+ 
  Clarity - Single responsibilities (SOLID)
+ 
  Testability - separated small classes, TDD, better code coverage
+ 
  Bug fixing - easier to track issues, locate bugs and problems
+ 
  Source control - smaller files, less conflicts, cleaner code
+ 
  Easy - codebase looks similar, faster to read others work
 
 
  **Drawbacks**
  
  Verbosity - many files per module
+ 
  Complexity - many protocols and delegates
+ 
  On-boarding - lack of proper VIPER knowledge
 
 
