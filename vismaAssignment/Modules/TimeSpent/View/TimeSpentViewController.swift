@@ -75,6 +75,13 @@ extension TimeSpentViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle,
+                   forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            presenter.deleteTime(indexPath: indexPath)
+        }
+    }
 }
 
 // MARK: - TimeSpentPresentation

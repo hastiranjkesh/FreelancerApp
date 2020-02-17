@@ -16,13 +16,21 @@ class TimeSpentInteractor {
     
     weak var output: TimeSpentInteractorOutput?
     var dataManager: DBDataManager
+    var projectId: String
     
-    init(dataManager: DBDataManager) {
+    init(dataManager: DBDataManager, projectId: String) {
         self.dataManager = dataManager
+        self.projectId = projectId
     }
     
-    func loadTimes(projectId: String) {
+    func loadTimes() {
         guard let times = dataManager.getTimes(NSPredicate(format: "projId = %@", projectId)) else { return }
         output?.updateTimesList(model: times)
+    }
+    
+    func deleteProject(model: TimeModel) {
+        dataManager.deleteTime(model) {[weak self] in
+            self?.loadTimes()
+        }
     }
 }

@@ -13,7 +13,7 @@ class TimeSpentRouter {
     weak var view: UIViewController?
 
     static func setupModule(projectId: String) -> TimeSpentViewController {
-        let interactor = TimeSpentInteractor(dataManager: RealmDataBase())
+        let interactor = TimeSpentInteractor(dataManager: RealmDataBase(), projectId: projectId)
         let router = TimeSpentRouter()
         let presenter = TimeSpentPresenter(interactor: interactor, router: router, projectId: projectId)
         let viewController = TimeSpentViewController(presenter: presenter)

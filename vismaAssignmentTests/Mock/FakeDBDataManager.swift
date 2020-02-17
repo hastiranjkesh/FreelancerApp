@@ -36,9 +36,15 @@ class FakeDBDataManager: DBDataManager {
         var times = [TimeModel]()
         let formater = DateFormatter()
         formater.dateFormat = "EEEE MMMM dd Y"
-        times.append(TimeModel(date: formater.date(from: "Friday February 14 2020")!, hours: 4.0, projectId: "1234"))
-        times.append(TimeModel(date: formater.date(from: "Saturday February 15 2020")!, hours: 8.0, projectId: "1234"))
-        times.append(TimeModel(date: formater.date(from: "Sunday February 16 2020")!, hours: 12.0, projectId: "1234"))
+        times.append(TimeModel(date: formater.date(from: "Friday February 14 2020")!,
+                               hours: 4.0, projectId: "1234", timeId: "abcd"))
+        times.append(TimeModel(date: formater.date(from: "Saturday February 15 2020")!,
+                               hours: 8.0, projectId: "1234", timeId: "abce"))
+        times.append(TimeModel(date: formater.date(from: "Sunday February 16 2020")!,
+                               hours: 12.0, projectId: "1234", timeId: "abcf"))
         return times
+    }
+    
+    func deleteTime(_ data: TimeModel, completion: @escaping () -> Void) {
     }
 }

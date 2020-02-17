@@ -12,6 +12,7 @@ struct TimeModel {
     let date: Date
     let hours: Double
     let projectId: String
+    let timeId: String
 }
 
 extension TimeModel {
@@ -19,6 +20,7 @@ extension TimeModel {
         date = entity.date
         hours = entity.hours
         projectId = entity.project.first?.projId ?? ""
+        timeId = entity.timeId
     }
 }
 
@@ -27,6 +29,7 @@ extension TimeModel: Equatable {
     static func == (lhs: TimeModel, rhs: TimeModel) -> Bool {
         return lhs.date == rhs.date &&
             lhs.hours == rhs.hours &&
-            lhs.projectId == rhs.projectId
+            lhs.projectId == rhs.projectId &&
+            lhs.timeId == rhs.timeId
     }
 }

@@ -16,7 +16,7 @@ class TimeModelTest: XCTestCase {
         formater.dateFormat = "EEEE MMMM dd Y"
         let date = formater.date(from: "Sunday February 16 2020")!
         
-        let time = TimeModel(date: date, hours: 6.0, projectId: "1234")
+        let time = TimeModel(date: date, hours: 6.0, projectId: "1234", timeId: "abcd")
         XCTAssertEqual(time.date, date)
         XCTAssertEqual(time.hours, 6.0)
         XCTAssertEqual(time.projectId, "1234")

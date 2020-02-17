@@ -42,7 +42,8 @@ class AddTimePresenter {
         if validateUserInputs(hours: hours) {
             if let hoursValue = hours {
                 if let hoursValue = Double(hoursValue) {
-                    let timeModel = TimeModel(date: date, hours: hoursValue, projectId: projectId)
+                    let timeModel = TimeModel(date: date, hours: hoursValue,
+                                              projectId: projectId, timeId: UUID().uuidString)
                     interactor.saveTime(time: timeModel)
                 }
             }

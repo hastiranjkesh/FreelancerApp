@@ -25,17 +25,17 @@ class TimeSpentInteractorTests: XCTestCase {
     let fakeDataManager = FakeDBDataManager()
     
     override func setUp() {
-        subject = TimeSpentInteractor(dataManager: fakeDataManager)
+        subject = TimeSpentInteractor(dataManager: fakeDataManager, projectId: "1234")
         subject?.output = interactorOutput
     }
     
     func test_GetTimesForSpecificProject_CheckCount() {
-        subject?.loadTimes(projectId: "1234")
+        subject?.loadTimes()
         XCTAssertEqual(interactorOutput.times?.count, 3)
     }
     
     func test_GetTimesForSpecificProject_CheckId() {
-        subject?.loadTimes(projectId: "1234")
+        subject?.loadTimes()
         XCTAssertEqual(interactorOutput.times?.first?.projectId, "1234")
     }
     

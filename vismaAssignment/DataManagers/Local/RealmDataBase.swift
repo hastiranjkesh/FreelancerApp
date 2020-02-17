@@ -96,6 +96,28 @@ class RealmDataBase: DBDataManager {
         return timeModels
     }
     
+    func deleteTime(_ data: TimeModel, completion: @escaping () -> Void) {
+        if !isRealmAccessible() { return }
+        do {
+            guard let time = getTimeEntity(NSPredicate(format: "timeId = %@",
+                                                       data.timeId)) else { return }
+            let realm = try Realm()
+            realm.refresh()
+            
+            if realm.isInWriteTransaction {
+                realm.delete(time)
+                completion()
+            } else {
+                try? realm.write {
+                    realm.delete(time)
+                    completion()
+                }
+            }
+        } catch let error {
+            print("Realm: Something went wrong with error: \(error)")
+        }
+    }
+    
     private func getProjectEntities(_ predicate: NSPredicate?) -> [ProjectEntity]? {
         if !isRealmAccessible() { return nil }
         do {
@@ -104,6 +126,20 @@ class RealmDataBase: DBDataManager {
             let projects = predicate == nil ? realm.objects(ProjectEntity.self) :
                 realm.objects(ProjectEntity.self).filter(predicate!)
             return projects.toArray()
+        } catch {
+            print("Realm: Something went wrong with error: \(error)")
+        }
+        return nil
+    }
+    
+    private func getTimeEntity(_ predicate: NSPredicate?) -> TimeEntity? {
+        if !isRealmAccessible() { return nil }
+        do {
+            let realm = try Realm()
+            realm.refresh()
+            let time = predicate == nil ? realm.objects(TimeEntity.self) :
+                realm.objects(TimeEntity.self).filter(predicate!)
+            return time.toArray().first
         } catch {
             print("Realm: Something went wrong with error: \(error)")
         }

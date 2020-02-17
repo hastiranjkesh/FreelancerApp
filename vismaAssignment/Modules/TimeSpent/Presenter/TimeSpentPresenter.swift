@@ -27,7 +27,7 @@ class TimeSpentPresenter {
     }
     
     func setupView() {
-        interactor.loadTimes(projectId: projectId)
+        interactor.loadTimes()
     }
     
     func showAddTimeView() {
@@ -46,6 +46,10 @@ class TimeSpentPresenter {
         let formater = DateFormatter()
         formater.dateFormat = "EEEE MMMM dd Y"
         return formater.string(from: date)
+    }
+    
+    func deleteTime(indexPath: IndexPath) {
+        interactor.deleteProject(model: times[indexPath.row])
     }
 }
 
