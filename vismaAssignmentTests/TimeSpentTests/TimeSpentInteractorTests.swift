@@ -25,7 +25,7 @@ class TimeSpentInteractorTests: XCTestCase {
     let fakeDataManager = FakeDBDataManager()
     
     override func setUp() {
-        subject = TimeSpentInteractor(dataManager: fakeDataManager, projectId: "1234")
+        subject = TimeSpentInteractor(dataManager: fakeDataManager, projectId: "1234", projectName: "project1")
         subject?.output = interactorOutput
     }
     

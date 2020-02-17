@@ -17,13 +17,11 @@ class TimeSpentPresenter {
     var interactor: TimeSpentInteractor
     var router: TimeSpentRouter
     weak var view: TimeSpentPresentation?
-    var projectId: String
     var times = [TimeModel]()
     
-    init(interactor: TimeSpentInteractor, router: TimeSpentRouter, projectId: String) {
+    init(interactor: TimeSpentInteractor, router: TimeSpentRouter) {
         self.interactor = interactor
         self.router = router
-        self.projectId = projectId
     }
     
     func setupView() {
@@ -31,7 +29,7 @@ class TimeSpentPresenter {
     }
     
     func showAddTimeView() {
-        router.showAddTimeView(id: projectId)
+        router.showAddTimeView(id: interactor.getProjectId())
     }
     
     func generateTotalHours() -> String {
@@ -50,6 +48,10 @@ class TimeSpentPresenter {
     
     func deleteTime(indexPath: IndexPath) {
         interactor.deleteProject(model: times[indexPath.row])
+    }
+    
+    func getProjectName() -> String {
+        return interactor.getProjectName()
     }
 }
 

@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimeSpentViewController" customModule="vismaAssignment" customModuleProvider="target">
             <connections>
+                <outlet property="projectNameLabel" destination="rjv-m0-MIn" id="c0g-sY-MBI"/>
                 <outlet property="tableView" destination="kai-eU-Ouw" id="0JX-zq-aSS"/>
                 <outlet property="totalHoursLabel" destination="h2V-f4-0UI" id="qA7-LA-zRc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -31,25 +32,41 @@
                     <rect key="frame" x="0.0" y="806" width="414" height="90"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total hours:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10V-zk-prx">
-                            <rect key="frame" x="18" y="34.5" width="97" height="21"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <rect key="frame" x="18" y="43" width="94.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2V-f4-0UI">
-                            <rect key="frame" x="302" y="34.5" width="94" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <rect key="frame" x="299.5" y="43" width="96.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8KJ-XY-e9l">
+                            <rect key="frame" x="18" y="10" width="120" height="21"/>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Economic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjv-m0-MIn">
+                            <rect key="frame" x="150" y="10" width="77" height="21"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" red="0.10196078431372549" green="0.73725490196078436" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="10V-zk-prx" firstAttribute="centerY" secondItem="UQE-e3-fIL" secondAttribute="centerY" id="Q4J-6U-bnY"/>
+                        <constraint firstItem="rjv-m0-MIn" firstAttribute="centerY" secondItem="8KJ-XY-e9l" secondAttribute="centerY" id="7yf-p6-9ll"/>
+                        <constraint firstItem="8KJ-XY-e9l" firstAttribute="top" secondItem="UQE-e3-fIL" secondAttribute="top" constant="10" id="Nik-hn-JAg"/>
+                        <constraint firstItem="8KJ-XY-e9l" firstAttribute="leading" secondItem="UQE-e3-fIL" secondAttribute="leading" constant="18" id="RV6-UE-jZs"/>
                         <constraint firstItem="10V-zk-prx" firstAttribute="leading" secondItem="UQE-e3-fIL" secondAttribute="leading" constant="18" id="SeI-NM-1wC"/>
                         <constraint firstAttribute="trailing" secondItem="h2V-f4-0UI" secondAttribute="trailing" constant="18" id="Snm-hd-wAm"/>
+                        <constraint firstItem="rjv-m0-MIn" firstAttribute="leading" secondItem="8KJ-XY-e9l" secondAttribute="trailing" constant="12" id="TCY-aB-ZJD"/>
                         <constraint firstAttribute="height" constant="90" id="ZvS-6m-bCg"/>
-                        <constraint firstItem="h2V-f4-0UI" firstAttribute="centerY" secondItem="UQE-e3-fIL" secondAttribute="centerY" id="soK-fV-fEr"/>
+                        <constraint firstItem="10V-zk-prx" firstAttribute="top" secondItem="8KJ-XY-e9l" secondAttribute="bottom" constant="12" id="gmD-mg-NND"/>
+                        <constraint firstItem="h2V-f4-0UI" firstAttribute="centerY" secondItem="10V-zk-prx" secondAttribute="centerY" id="zj0-JP-Ddy"/>
                     </constraints>
                 </view>
             </subviews>

@@ -17,10 +17,12 @@ class TimeSpentInteractor {
     weak var output: TimeSpentInteractorOutput?
     var dataManager: DBDataManager
     var projectId: String
+    var projectName: String
     
-    init(dataManager: DBDataManager, projectId: String) {
+    init(dataManager: DBDataManager, projectId: String, projectName: String) {
         self.dataManager = dataManager
         self.projectId = projectId
+        self.projectName = projectName
     }
     
     func loadTimes() {
@@ -32,5 +34,13 @@ class TimeSpentInteractor {
         dataManager.deleteTime(model) {[weak self] in
             self?.loadTimes()
         }
+    }
+    
+    func getProjectId() -> String {
+        return projectId
+    }
+    
+    func getProjectName() -> String {
+        return projectName
     }
 }

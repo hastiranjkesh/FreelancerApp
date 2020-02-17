@@ -47,7 +47,7 @@ class ProjectsPresenter {
     
     func projectDidSelect(indexPath: IndexPath) {
         guard let entity = projects?[indexPath.row] else { return }
-        router.showTimeSpentView(projectId: entity.id)
+        router.showTimeSpentView(projectId: entity.id, projectName: entity.name)
     }
 }
 

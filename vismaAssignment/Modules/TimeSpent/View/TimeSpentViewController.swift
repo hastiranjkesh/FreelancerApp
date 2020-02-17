@@ -12,6 +12,7 @@ class TimeSpentViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalHoursLabel: UILabel!
+    @IBOutlet weak var projectNameLabel: UILabel!
     
     var presenter: TimeSpentPresenter
     let timeSpentCellReuseIdentifier = "TimeSpentTableViewCell"
@@ -32,8 +33,9 @@ class TimeSpentViewController: UIViewController {
                            forCellReuseIdentifier: timeSpentCellReuseIdentifier)
         tableView.tableFooterView = UIView()
         title = "Time Spent"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: UIBarButtonItem.Style.done,
-                                                            target: self, action: #selector(addTime))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style:
+            UIBarButtonItem.Style.done, target: self, action: #selector(addTime))
+        projectNameLabel.text = presenter.getProjectName()
     }
     
     override func viewWillAppear(_ animated: Bool) {

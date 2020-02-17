@@ -26,8 +26,7 @@ class ProjectsPresenterTests: XCTestCase {
     
     class MockProjectsRouter: ProjectsRouter {
         var projectId: String?
-        
-        override func showTimeSpentView(projectId: String) {
+        override func showTimeSpentView(projectId: String, projectName: String) {
             self.projectId = projectId
         }
     }

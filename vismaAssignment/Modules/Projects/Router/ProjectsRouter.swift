@@ -32,8 +32,8 @@ class ProjectsRouter {
         view?.present(navController, animated: true, completion: nil)
     }
     
-    func showTimeSpentView(projectId: String) {
-        let timeSpentVC = TimeSpentRouter.setupModule(projectId: projectId)
+    func showTimeSpentView(projectId: String, projectName: String) {
+        let timeSpentVC = TimeSpentRouter.setupModule(projectId: projectId, projectName: projectName)
         view?.navigationController?.pushViewController(timeSpentVC, animated: true)
     }
 }

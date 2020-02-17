@@ -26,19 +26,18 @@ class TimeSpentPresenterTests: XCTestCase {
     }
     
     var presenter: TimeSpentPresenter?
-    var mockInteractor = MockTimeSpentInteractor(dataManager: FakeDBDataManager(), projectId: "1234")
+    var mockInteractor = MockTimeSpentInteractor(dataManager: FakeDBDataManager(), projectId: "1234", projectName: "project1")
     var mockPresentation: MockTimeSpentPresentation?
     let mockRouter = MockTimeSpentRouter()
     
     override func setUp() {
-        presenter = TimeSpentPresenter(interactor: mockInteractor, router: mockRouter, projectId: "1234")
+        presenter = TimeSpentPresenter(interactor: mockInteractor, router: mockRouter)
         mockPresentation = MockTimeSpentPresentation()
         presenter?.view = mockPresentation
         mockInteractor.output = presenter
     }
     
     func test_PresenterGetDataFromInteractorSuccessfully() {
-        presenter?.projectId = "1234"
         presenter?.setupView()
         guard let times = presenter?.times else {
             XCTFail("Output has caught no times")
@@ -48,7 +47,6 @@ class TimeSpentPresenterTests: XCTestCase {
     }
     
     func test_PresenterGetDataFromInteractor_ProduceTotalHoursForView() {
-        presenter?.projectId = "1234"
         presenter?.setupView()
         guard let totalHours = mockPresentation?.totalHours else {
             XCTFail("totalHours is nil")
