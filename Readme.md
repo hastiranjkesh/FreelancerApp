@@ -8,35 +8,35 @@ In one view of the app in "Add Time Module" I used RxSwift. Because the app need
 VIPER layers's separation conforms to the Single *Responsibility Principle*. The Interactor is responsible to the business analyst, the Presenter represents the interaction designer,  the View is responsible to the visual designer and Router contains navigation logic for describing which screens are shown in which order. 
 
 
-**Data Layer**
-
+**Data Layer:**
 Data Manager is responsible for providing entities to an Interactor. Interactor do not know how to persist the entities.
-Entities are the Realm objects manipulated by an Interactor. The Interactor never passes entities to the presentation layer. I wanted my Realm objects to remain behind my data layer. Interactors should not work with Realm objects.  I defined entities outside the VIPER module structure (in the DataManager layer), because these entities are shared across the system. One key point to help me truly decouple my modules is to keep all entities on a separate folder, linking them to the project itself and not to any specific module.
+Entities are the Realm objects manipulated by an Interactor. The Interactor never passes entities to the presentation layer. I wanted my Realm objects to remain behind my data layer. Interactors should not work with Realm objects.  
+
+I defined entities outside the VIPER module structure (in the DataManager layer), because these entities are shared across the system. One key point to help me truly decouple my modules is to keep all entities on a separate folder, linking them to the project itself and not to any specific module.
 
  
  
  **Advantages of using VIPER**
  
- Simplicity - for large teams on complex projects
- Scalability - simultaneous work seamlessly
- Reusability - decoupled app components based on roles
- Consistency - module skeletons, separation of concerns
- Clarity - Single responsibilities (SOLID)
- Testability - separated small classes, TDD, better code coverage
- Bug fixing - easier to track issues, locate bugs and problems
- Source control - smaller files, less conflicts, cleaner code
- Easy - codebase looks similar, faster to read others work
+ *1) Simplicity* - for large teams on complex projects, 
+ *2) Scalability* - simultaneous work seamlessly, 
+ *3) Reusability* - decoupled app components based on roles, 
+ *4) Consistency* - module skeletons, separation of concerns, 
+ *5) Clarity* - Single responsibilities (SOLID), 
+ *6) Testability* - separated small classes, TDD, better code coverage, 
+ *7) Bug fixing* - easier to track issues, locate bugs and problems, 
+ *8) Source control* - smaller files, less conflicts, cleaner code, 
+ *9) Easy - codebase* looks similar, faster to read others work
 
 
  **Drawbacks**
  
- Verbosity - many files per module
- Complexity - many protocols and delegates
- On-boarding - lack of proper VIPER knowledge
+ *Verbosity* - many files per module, 
+ *Complexity* - many protocols and delegates, 
+ *On-boarding* - lack of proper VIPER knowledge
 
 
-**Test**
-
+**Test :**
 I wrote unit tests for interactor and presenter of each VIPER module. Because interactor contains main business logic and presenter contains logic responsible for preparing data before displaying, these components seemed to me more critical than others.
 
 **App Features**:
