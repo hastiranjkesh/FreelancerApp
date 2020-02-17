@@ -10,6 +10,7 @@ import Foundation
 
 protocol AddTimePresentation: class {
     func showHoursError()
+    func updateHours(hour: String)
 }
 
 class AddTimePresenter {
@@ -17,6 +18,16 @@ class AddTimePresenter {
     var router: AddTimeRouter
     weak var view: AddTimePresentation?
     var projectId: String
+    var hoursValue: Float = 0 {
+        didSet {
+            produceHoursText()
+        }
+    }
+    var minutesValue: Float = 0 {
+        didSet {
+            produceHoursText()
+        }
+    }
     
     init(interactor: AddTimeInteractor, router: AddTimeRouter, id: String) {
         self.interactor = interactor
@@ -49,6 +60,19 @@ class AddTimePresenter {
             return true
         }
         return false
+    }
+    
+    private func produceHoursText() {
+        let hour: Float = hoursValue + round((minutesValue/60)*100)/100
+        view?.updateHours(hour: "\(hour)")
+    }
+    
+    func updateHourValue(hour: String) {
+        hoursValue = hour.isEmpty ? 0 : Float(hour) ?? 0
+    }
+    
+    func updateMinuteValue(min: String) {
+        minutesValue = min.isEmpty ? 0 : Float(min) ?? 0
     }
 }
 
