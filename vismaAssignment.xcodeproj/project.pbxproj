@@ -10,6 +10,8 @@
 		465A9AEA23FA799B00975305 /* FakeDBDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A9AE923FA799B00975305 /* FakeDBDataManager.swift */; };
 		465A9AED23FA79D200975305 /* ProjectModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A9AEC23FA79D200975305 /* ProjectModelTest.swift */; };
 		465A9AEF23FA79F200975305 /* TimeModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A9AEE23FA79F200975305 /* TimeModelTest.swift */; };
+		465A9AF223FA7A8700975305 /* ProjectsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A9AF123FA7A8700975305 /* ProjectsInteractorTests.swift */; };
+		465A9AF423FA7AA600975305 /* ProjectsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A9AF323FA7AA600975305 /* ProjectsPresenterTests.swift */; };
 		4687B99E23F90B1A00270F45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B99D23F90B1A00270F45 /* AppDelegate.swift */; };
 		4687B9A723F90B1C00270F45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4687B9A623F90B1C00270F45 /* Assets.xcassets */; };
 		4687B9AA23F90B1C00270F45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4687B9A823F90B1C00270F45 /* LaunchScreen.storyboard */; };
@@ -64,6 +66,8 @@
 		465A9AE923FA799B00975305 /* FakeDBDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDBDataManager.swift; sourceTree = "<group>"; };
 		465A9AEC23FA79D200975305 /* ProjectModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModelTest.swift; sourceTree = "<group>"; };
 		465A9AEE23FA79F200975305 /* TimeModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeModelTest.swift; sourceTree = "<group>"; };
+		465A9AF123FA7A8700975305 /* ProjectsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsInteractorTests.swift; sourceTree = "<group>"; };
+		465A9AF323FA7AA600975305 /* ProjectsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsPresenterTests.swift; sourceTree = "<group>"; };
 		4687B99A23F90B1A00270F45 /* vismaAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vismaAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4687B99D23F90B1A00270F45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4687B9A623F90B1C00270F45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 		465A9ADF23FA797400975305 /* vismaAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
+				465A9AF023FA7A7400975305 /* ProjectListTests */,
 				465A9AEB23FA79BF00975305 /* ModelTests */,
 				465A9AE823FA797E00975305 /* Mock */,
 				465A9AE223FA797400975305 /* Info.plist */,
@@ -148,6 +153,15 @@
 				465A9AEE23FA79F200975305 /* TimeModelTest.swift */,
 			);
 			path = ModelTests;
+			sourceTree = "<group>";
+		};
+		465A9AF023FA7A7400975305 /* ProjectListTests */ = {
+			isa = PBXGroup;
+			children = (
+				465A9AF123FA7A8700975305 /* ProjectsInteractorTests.swift */,
+				465A9AF323FA7AA600975305 /* ProjectsPresenterTests.swift */,
+			);
+			path = ProjectListTests;
 			sourceTree = "<group>";
 		};
 		4687B99123F90B1A00270F45 = {
@@ -621,6 +635,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465A9AF423FA7AA600975305 /* ProjectsPresenterTests.swift in Sources */,
+				465A9AF223FA7A8700975305 /* ProjectsInteractorTests.swift in Sources */,
 				465A9AEA23FA799B00975305 /* FakeDBDataManager.swift in Sources */,
 				465A9AEF23FA79F200975305 /* TimeModelTest.swift in Sources */,
 				465A9AED23FA79D200975305 /* ProjectModelTest.swift in Sources */,
