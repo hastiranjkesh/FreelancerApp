@@ -46,6 +46,10 @@ class TimeSpentViewController: UIViewController {
     @objc func addTime() {
         presenter.showAddTimeView()
     }
+    
+    @IBAction func shareButtonTapped(_ sender: Any) {
+        presenter.shareTimes()
+    }
 }
 
 // MARK: - UITableViewDataSource

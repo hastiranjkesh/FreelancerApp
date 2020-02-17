@@ -26,7 +26,8 @@ class TimeSpentPresenterTests: XCTestCase {
     }
     
     var presenter: TimeSpentPresenter?
-    var mockInteractor = MockTimeSpentInteractor(dataManager: FakeDBDataManager(), projectId: "1234", projectName: "project1")
+    var mockInteractor = MockTimeSpentInteractor(dataManager: FakeDBDataManager(),
+                                                 projectId: "1234", projectName: "project1")
     var mockPresentation: MockTimeSpentPresentation?
     let mockRouter = MockTimeSpentRouter()
     

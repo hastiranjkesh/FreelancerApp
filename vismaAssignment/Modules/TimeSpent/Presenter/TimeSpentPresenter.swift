@@ -53,6 +53,11 @@ class TimeSpentPresenter {
     func getProjectName() -> String {
         return interactor.getProjectName()
     }
+    
+    func shareTimes() {
+        let text = "Project name: " + interactor.getProjectName() + ", Total hours: " + generateTotalHours()
+        router.showShareActivityView(textToShare: text)
+    }
 }
 
 // MARK: - TimeSpentInteractorOutput

@@ -55,17 +55,31 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXO-XM-YTL">
+                            <rect key="frame" x="366" y="1.5" width="38" height="38"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="38" id="JKg-rR-H6c"/>
+                                <constraint firstAttribute="height" constant="38" id="w9p-sp-tUT"/>
+                            </constraints>
+                            <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" image="arrowshape.turn.up.right.fill" catalog="system"/>
+                            <connections>
+                                <action selector="shareButtonTapped:" destination="-1" eventType="touchUpInside" id="LCO-aP-RRS"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.10196078431372549" green="0.73725490196078436" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="rjv-m0-MIn" firstAttribute="centerY" secondItem="8KJ-XY-e9l" secondAttribute="centerY" id="7yf-p6-9ll"/>
                         <constraint firstItem="8KJ-XY-e9l" firstAttribute="top" secondItem="UQE-e3-fIL" secondAttribute="top" constant="10" id="Nik-hn-JAg"/>
+                        <constraint firstItem="OXO-XM-YTL" firstAttribute="centerY" secondItem="8KJ-XY-e9l" secondAttribute="centerY" id="QuD-Fg-zC0"/>
                         <constraint firstItem="8KJ-XY-e9l" firstAttribute="leading" secondItem="UQE-e3-fIL" secondAttribute="leading" constant="18" id="RV6-UE-jZs"/>
-                        <constraint firstItem="10V-zk-prx" firstAttribute="leading" secondItem="UQE-e3-fIL" secondAttribute="leading" constant="18" id="SeI-NM-1wC"/>
                         <constraint firstAttribute="trailing" secondItem="h2V-f4-0UI" secondAttribute="trailing" constant="18" id="Snm-hd-wAm"/>
                         <constraint firstItem="rjv-m0-MIn" firstAttribute="leading" secondItem="8KJ-XY-e9l" secondAttribute="trailing" constant="12" id="TCY-aB-ZJD"/>
                         <constraint firstAttribute="height" constant="90" id="ZvS-6m-bCg"/>
                         <constraint firstItem="10V-zk-prx" firstAttribute="top" secondItem="8KJ-XY-e9l" secondAttribute="bottom" constant="12" id="gmD-mg-NND"/>
+                        <constraint firstItem="10V-zk-prx" firstAttribute="leading" secondItem="8KJ-XY-e9l" secondAttribute="leading" id="obG-by-OFa"/>
+                        <constraint firstAttribute="trailing" secondItem="OXO-XM-YTL" secondAttribute="trailing" constant="10" id="ysK-1a-tyk"/>
                         <constraint firstItem="h2V-f4-0UI" firstAttribute="centerY" secondItem="10V-zk-prx" secondAttribute="centerY" id="zj0-JP-Ddy"/>
                     </constraints>
                 </view>
@@ -84,4 +98,7 @@
             <point key="canvasLocation" x="139" y="150"/>
         </view>
     </objects>
+    <resources>
+        <image name="arrowshape.turn.up.right.fill" catalog="system" width="64" height="52"/>
+    </resources>
 </document>
