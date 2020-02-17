@@ -65,20 +65,19 @@ extension ProjectsViewController: UITableViewDelegate {
 // MARK: - UITableViewDataSource
 extension ProjectsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        if presenter.projects.count > 0 {
-            return 1
-        }
-        return 0
+        guard let count = presenter.projects?.count, count > 0 else { return 0 }
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.projects.count
+        guard let count = presenter.projects?.count else { return 0 }
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: projectCellReuseIdentifier, for: indexPath)
             as? ProjectTableViewCell else { return UITableViewCell() }
-        let project = presenter.projects[indexPath.row]
+        guard let project = presenter.projects?[indexPath.row] else { return UITableViewCell() }
         let hours = "\(project.hours) Hours"
         cell.configure(name: project.name, hours: hours)
         return cell

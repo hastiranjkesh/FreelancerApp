@@ -9,12 +9,14 @@
 import Foundation
 
 protocol ProjectsInteractorOutput: class {
-    func updateProjectsList(projects: [ProjectModel])
+    var projects: [ProjectModel]? { get }
+    func updateProjectsList(with projects: [ProjectModel])
 }
 
 class ProjectsInteractor {
     weak var output: ProjectsInteractorOutput?
     var dataManager: DBDataManager
+    var projects: [ProjectModel]?
     
     init(dataManager: DBDataManager) {
         self.dataManager = dataManager
@@ -22,7 +24,8 @@ class ProjectsInteractor {
     
     func loadProjects() {
         guard let projects = dataManager.getProjects(nil) else { return }
-        output?.updateProjectsList(projects: projects)
+        self.projects = projects
+        output?.updateProjectsList(with: projects)
     }
     
     func deleteProject(model: ProjectModel) {

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 protocol ProjectsPresentation: class {
     func updateProjectsView(showEmptyState: Bool)
 }
@@ -17,7 +16,16 @@ class ProjectsPresenter {
     var interactor: ProjectsInteractor
     var router: ProjectsRouter
     weak var view: ProjectsPresentation?
-    var projects = [ProjectModel]()
+    
+    private(set) var projects: [ProjectModel]? {
+        didSet {
+            var showEmptyState = false
+            if projects?.count == 0 {
+                showEmptyState = true
+            }
+            view?.updateProjectsView(showEmptyState: showEmptyState)
+        }
+    }
     
     init(interactor: ProjectsInteractor, router: ProjectsRouter) {
         self.interactor = interactor
@@ -33,24 +41,20 @@ class ProjectsPresenter {
     }
     
     func deleteProject(indexPath: IndexPath) {
-        let entity = projects[indexPath.row]
+        guard let entity = projects?[indexPath.row] else { return }
         interactor.deleteProject(model: entity)
     }
     
     func projectDidSelect(indexPath: IndexPath) {
-        let entity = projects[indexPath.row]
+        guard let entity = projects?[indexPath.row] else { return }
         router.showTimeSpentView(projectId: entity.id)
     }
 }
 
 // MARK: - ProjectsInteractorOutput
 extension ProjectsPresenter: ProjectsInteractorOutput {
-    func updateProjectsList(projects: [ProjectModel]) {
+    
+    func updateProjectsList(with projects: [ProjectModel]) {
         self.projects = projects
-        var showEmptyState = false
-        if projects.count == 0 {
-            showEmptyState = true
-        }
-        view?.updateProjectsView(showEmptyState: showEmptyState)
     }
 }
