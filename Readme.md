@@ -49,6 +49,9 @@ I wrote unit tests for interactor and presenter of each VIPER module. Because in
 6. Delete a registered time 
 7. Share a project's total hours 
 
+**Usage**
+
+I didn't keep the Pods directory under source control, and I add it to my .gitignore. Please run ***pod install*** before build the project. 
 
 
 
