@@ -51,6 +51,9 @@
 		4687BA0923F92B5300270F45 /* AddTimePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687BA0823F92B5300270F45 /* AddTimePresenter.swift */; };
 		4687BA0B23F92B6D00270F45 /* AddTimeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687BA0A23F92B6D00270F45 /* AddTimeInteractor.swift */; };
 		4687BA0D23F92B8100270F45 /* AddTimeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687BA0C23F92B8100270F45 /* AddTimeRouter.swift */; };
+		46A189C124079C2E00E806C9 /* AutoEquatable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 46A189C024079C2E00E806C9 /* AutoEquatable.stencil */; };
+		46A189C92407A6A600E806C9 /* AutoEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A189C82407A6A600E806C9 /* AutoEquatable.swift */; };
+		46A189CB2407A81E00E806C9 /* Generated in Resources */ = {isa = PBXBuildFile; fileRef = 46A189CA2407A81E00E806C9 /* Generated */; };
 		F2A9845AA78AB312BF34BB32 /* Pods_vismaAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F269AF81555719FA3FDBD72A /* Pods_vismaAssignment.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +117,9 @@
 		4687BA0823F92B5300270F45 /* AddTimePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimePresenter.swift; sourceTree = "<group>"; };
 		4687BA0A23F92B6D00270F45 /* AddTimeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimeInteractor.swift; sourceTree = "<group>"; };
 		4687BA0C23F92B8100270F45 /* AddTimeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimeRouter.swift; sourceTree = "<group>"; };
+		46A189C024079C2E00E806C9 /* AutoEquatable.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoEquatable.stencil; sourceTree = "<group>"; };
+		46A189C82407A6A600E806C9 /* AutoEquatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoEquatable.swift; sourceTree = "<group>"; };
+		46A189CA2407A81E00E806C9 /* Generated */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Generated; sourceTree = "<group>"; };
 		F269AF81555719FA3FDBD72A /* Pods_vismaAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vismaAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC1997136576116B72113B6 /* Pods-vismaAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vismaAssignment.release.xcconfig"; path = "Target Support Files/Pods-vismaAssignment/Pods-vismaAssignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -197,6 +203,7 @@
 		4687B99123F90B1A00270F45 = {
 			isa = PBXGroup;
 			children = (
+				46A189C224079C4600E806C9 /* Sourcery */,
 				465A9B0123FB09A500975305 /* Readme.md */,
 				4687B99C23F90B1A00270F45 /* vismaAssignment */,
 				465A9ADF23FA797400975305 /* vismaAssignmentTests */,
@@ -243,6 +250,7 @@
 		4687B9B423F90ECF00270F45 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				46A189C82407A6A600E806C9 /* AutoEquatable.swift */,
 				4687B9CE23F9147C00270F45 /* ProjectModel.swift */,
 				4687B9FC23F9275B00270F45 /* TimeModel.swift */,
 			);
@@ -481,6 +489,23 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		46A189BF24079C0B00E806C9 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				46A189C024079C2E00E806C9 /* AutoEquatable.stencil */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		46A189C224079C4600E806C9 /* Sourcery */ = {
+			isa = PBXGroup;
+			children = (
+				46A189CA2407A81E00E806C9 /* Generated */,
+				46A189BF24079C0B00E806C9 /* Templates */,
+			);
+			path = Sourcery;
+			sourceTree = "<group>";
+		};
 		768CD066EE95BC6AB4A1278C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -591,8 +616,10 @@
 			files = (
 				4687B9F523F9269000270F45 /* TimeSpentTableViewCell.xib in Resources */,
 				4687BA0723F92AF000270F45 /* AddTimeViewController.xib in Resources */,
+				46A189CB2407A81E00E806C9 /* Generated in Resources */,
 				4687B9AA23F90B1C00270F45 /* LaunchScreen.storyboard in Resources */,
 				4687B9C223F910E600270F45 /* ProjectsViewController.xib in Resources */,
+				46A189C124079C2E00E806C9 /* AutoEquatable.stencil in Resources */,
 				4687B9A723F90B1C00270F45 /* Assets.xcassets in Resources */,
 				4687B9E023F91D0700270F45 /* AddProjectViewController.xib in Resources */,
 				4687B9F123F924F900270F45 /* TimeSpentViewController.xib in Resources */,
@@ -698,6 +725,7 @@
 				4687B9FD23F9275B00270F45 /* TimeModel.swift in Sources */,
 				4687B9CF23F9147C00270F45 /* ProjectModel.swift in Sources */,
 				4687B9E423F91E7300270F45 /* AddProjectInteractor.swift in Sources */,
+				46A189C92407A6A600E806C9 /* AutoEquatable.swift in Sources */,
 				4687B9E923F91F4700270F45 /* ViewExtension.swift in Sources */,
 				4687B9CD23F9141000270F45 /* ProjectsRouter.swift in Sources */,
 				4687B9E223F91DF500270F45 /* AddProjectPresenter.swift in Sources */,

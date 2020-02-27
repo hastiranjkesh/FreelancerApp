@@ -1,0 +1,7 @@
+sources:
+- vismaAssignment/Models
+
+templates:
+- Sourcery/Templates
+
+output: Sourcery/Generated

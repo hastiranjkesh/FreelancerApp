@@ -24,12 +24,15 @@ extension TimeModel {
     }
 }
 
-//For testing purpose
-extension TimeModel: Equatable {
-    static func == (lhs: TimeModel, rhs: TimeModel) -> Bool {
-        return lhs.date == rhs.date &&
-            lhs.hours == rhs.hours &&
-            lhs.projectId == rhs.projectId &&
-            lhs.timeId == rhs.timeId
-    }
+extension TimeModel: AutoEquatable {
+    
 }
+////For testing purpose
+//extension TimeModel: Equatable {
+//    static func == (lhs: TimeModel, rhs: TimeModel) -> Bool {
+//        return lhs.date == rhs.date &&
+//            lhs.hours == rhs.hours &&
+//            lhs.projectId == rhs.projectId &&
+//            lhs.timeId == rhs.timeId
+//    }
+//}
