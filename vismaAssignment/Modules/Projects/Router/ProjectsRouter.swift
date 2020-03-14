@@ -11,29 +11,35 @@ import UIKit
 class ProjectsRouter {
 
     weak var view: UIViewController?
+    let dataManager: DBDataManager
+    
+    init(dataManager: DBDataManager) {
+        self.dataManager = dataManager
+    }
 
-    static func setupModule(dataManager: DBDataManager) -> ProjectsViewController {
+    func makeProjectsViewController() -> ProjectsViewController {
         let interactor = ProjectsInteractor(dataManager: dataManager)
-        let router = ProjectsRouter()
-        let presenter = ProjectsPresenter(interactor: interactor, router: router)
+        let presenter = ProjectsPresenter(interactor: interactor, router: self)
         let viewController = ProjectsViewController(presenter: presenter)
 
         presenter.view = viewController
-        router.view = viewController
+        self.view = viewController
         interactor.output = presenter
 
         return viewController
     }
     
     func showAddProjectView() {
-        let newProjectVC = AddProjectRouter.setupModule()
+        let router = AddProjectRouter(dataManager: dataManager)
+        let newProjectVC = router.makeAddProjectViewController()
         let navController = UINavigationController(rootViewController: newProjectVC)
         navController.modalPresentationStyle = .fullScreen
         view?.present(navController, animated: true, completion: nil)
     }
     
     func showTimeSpentView(projectId: String, projectName: String) {
-        let timeSpentVC = TimeSpentRouter.setupModule(projectId: projectId, projectName: projectName)
+        let router = TimeSpentRouter(dataManager: dataManager)
+        let timeSpentVC = router.makeTimeSpentViewController(projectId: projectId, projectName: projectName)
         view?.navigationController?.pushViewController(timeSpentVC, animated: true)
     }
 }

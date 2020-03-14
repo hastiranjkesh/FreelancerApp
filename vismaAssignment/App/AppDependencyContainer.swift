@@ -17,6 +17,7 @@ class AppDependencyContainer {
     }
     
     func makeProjectsViewController() -> ProjectsViewController {
-        return ProjectsRouter.setupModule(dataManager: dataManager)
+        let router = ProjectsRouter(dataManager: dataManager)
+        return router.makeProjectsViewController()
     }
 }

@@ -10,15 +10,19 @@ import UIKit
 
 class AddProjectRouter {
     weak var view: UIViewController?
+    let dataManager: DBDataManager
+    
+    init(dataManager: DBDataManager) {
+        self.dataManager = dataManager
+    }
 
-    static func setupModule() -> AddProjectViewController {
-        let interactor = AddProjectInteractor(dataManager: RealmDataBase())
-        let router = AddProjectRouter()
-        let presenter = AddProjectPresenter(interactor: interactor, router: router)
+    func makeAddProjectViewController() -> AddProjectViewController {
+        let interactor = AddProjectInteractor(dataManager: dataManager)
+        let presenter = AddProjectPresenter(interactor: interactor, router: self)
         let viewController = AddProjectViewController(presenter: presenter)
 
         presenter.view = viewController
-        router.view = viewController
+        self.view = viewController
         interactor.output = presenter
 
         return viewController
