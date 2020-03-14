@@ -12,12 +12,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let dependencyContainer = AppDependencyContainer()
     var navController: UINavigationController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions
         launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let projectsViewController = ProjectsRouter.setupModule()
+        let projectsViewController = dependencyContainer.makeProjectsViewController()
         navController = UINavigationController(rootViewController: projectsViewController)
         navController?.modalPresentationStyle = .fullScreen
 

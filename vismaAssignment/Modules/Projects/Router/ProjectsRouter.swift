@@ -12,8 +12,8 @@ class ProjectsRouter {
 
     weak var view: UIViewController?
 
-    static func setupModule() -> ProjectsViewController {
-        let interactor = ProjectsInteractor(dataManager: RealmDataBase())
+    static func setupModule(dataManager: DBDataManager) -> ProjectsViewController {
+        let interactor = ProjectsInteractor(dataManager: dataManager)
         let router = ProjectsRouter()
         let presenter = ProjectsPresenter(interactor: interactor, router: router)
         let viewController = ProjectsViewController(presenter: presenter)

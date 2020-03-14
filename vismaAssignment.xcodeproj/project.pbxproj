@@ -17,6 +17,7 @@
 		465A9AFC23FADBEA00975305 /* AddTimeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A9AFB23FADBEA00975305 /* AddTimeInteractorTests.swift */; };
 		465A9AFE23FAE01500975305 /* AddTimePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A9AFD23FAE01500975305 /* AddTimePresenterTests.swift */; };
 		465A9B0223FB09A500975305 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 465A9B0123FB09A500975305 /* Readme.md */; };
+		466E4F7B241D29C20031C0EE /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466E4F7A241D29C20031C0EE /* AppDependencyContainer.swift */; };
 		4687B99E23F90B1A00270F45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687B99D23F90B1A00270F45 /* AppDelegate.swift */; };
 		4687B9A723F90B1C00270F45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4687B9A623F90B1C00270F45 /* Assets.xcassets */; };
 		4687B9AA23F90B1C00270F45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4687B9A823F90B1C00270F45 /* LaunchScreen.storyboard */; };
@@ -81,6 +82,7 @@
 		465A9AFB23FADBEA00975305 /* AddTimeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimeInteractorTests.swift; sourceTree = "<group>"; };
 		465A9AFD23FAE01500975305 /* AddTimePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimePresenterTests.swift; sourceTree = "<group>"; };
 		465A9B0123FB09A500975305 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		466E4F7A241D29C20031C0EE /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
 		4687B99A23F90B1A00270F45 /* vismaAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vismaAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4687B99D23F90B1A00270F45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4687B9A623F90B1C00270F45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 			children = (
 				4687B9E723F91F2900270F45 /* Extensions */,
 				4687B99D23F90B1A00270F45 /* AppDelegate.swift */,
+				466E4F7A241D29C20031C0EE /* AppDependencyContainer.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -732,6 +735,7 @@
 				4687BA0923F92B5300270F45 /* AddTimePresenter.swift in Sources */,
 				4687BA0623F92AF000270F45 /* AddTimeViewController.swift in Sources */,
 				4687B9C123F910E600270F45 /* ProjectsViewController.swift in Sources */,
+				466E4F7B241D29C20031C0EE /* AppDependencyContainer.swift in Sources */,
 				4687B9C623F912DD00270F45 /* ProjectTableViewCell.swift in Sources */,
 				4687B9F923F9271B00270F45 /* TimeSpentInteractor.swift in Sources */,
 				4687BA0B23F92B6D00270F45 /* AddTimeInteractor.swift in Sources */,
