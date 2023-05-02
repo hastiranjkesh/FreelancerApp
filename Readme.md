@@ -1,57 +1,26 @@
 # Time Registration App
 
-I chose VIPER as arcitecture and Realm as storage. 
-Viper encourages a separation of concerns and is a delegate driven architecture. So, most of the communication between different layers executes through delegation. One layer calls another through a protocol. Calling layer just calls a function from a protocol. Listening layer conforms to that protocol and implements the function.
+The task is to implement a simple iOS application that solves the following two user stories: 
 
-In one view of the app in "Add Time Module" I used RxSwift. Because the app needed to react to some events in a reactive way, so I found it good use case for using RxSwift and to showcase my ability to use it. I know that it's just a tool, it's not a superhero tool.
-
-VIPER layers's separation conforms to the Single *Responsibility Principle*. The Interactor is responsible to the business analyst, the Presenter represents the interaction designer,  the View is responsible to the visual designer and Router contains navigation logic for describing which screens are shown in which order. 
-
-
-**Data Layer:**
-Data Manager is responsible for providing entities to an Interactor. Interactor do not know how to persist the entities.
-Entities are the Realm objects manipulated by an Interactor. The Interactor never passes entities to the presentation layer. I wanted my Realm objects to remain behind my data layer. Interactors should not work with Realm objects.  
-
-I defined entities outside the VIPER module structure (in the DataManager layer), because these entities are shared across the system. One key point to help me truly decouple my modules is to keep all entities on a separate folder, linking them to the project itself and not to any specific module.
-
- 
- 
- **Advantages of using VIPER**
- 
- *1) Simplicity* - for large teams on complex projects, 
- *2) Scalability* - simultaneous work seamlessly, 
- *3) Reusability* - decoupled app components based on roles, 
- *4) Consistency* - module skeletons, separation of concerns, 
- *5) Clarity* - Single responsibilities (SOLID), 
- *6) Testability* - separated small classes, TDD, better code coverage, 
- *7) Bug fixing* - easier to track issues, locate bugs and problems, 
- *8) Source control* - smaller files, less conflicts, cleaner code, 
- *9) Easy - codebase* looks similar, faster to read others work
+As a freelance I want to be able to:
+- Register the time I spend on my projects, so that I can create correct invoices for my customers
+- Get an overview of my time registrations, so that I can create correct invoices for my customers
 
 
- **Drawbacks**
- 
- *Verbosity* - many files per module, 
- *Complexity* - many protocols and delegates, 
- *On-boarding* - lack of proper VIPER knowledge
-
-
-**Test :**
-I wrote unit tests for interactor and presenter of each VIPER module. Because interactor contains main business logic and presenter contains logic responsible for preparing data before displaying, these components seemed to me more critical than others.
-
-**App Features**:
-
-1. Add a project to a list
-2. Display project list with their total time registrations
-3. Delete a project from list
-4. Add time to a project
-5. Display a list of registration times for a project
-6. Delete a registered time 
-7. Share a project's total hours 
-
-**Usage**
-
-I didn't keep the Pods directory under source control, and I add it to my .gitignore. Please run ***pod install*** before build the project. 
+This Xcode project is a simple Swift application that uses the VIPER architecture pattern, the Realm database, and the RXSwift framework. It is designed to provide a basic example of how to structure an iOS application using VIPER and how to use Realm and RXSwift to manage data and asynchronous operations.
 
 
 
+# Architecture
+
+The project uses the VIPER architecture pattern. This pattern separates the application into five distinct layers, with each layer having a specific responsibility:
+
+- View: Handles the user interface and user input.
+- Interactor: Handles the business logic and data operations.
+- Presenter: Handles the presentation logic and communicates with the view and interactor.
+- Entity: Contains the data models and entities used by the application.
+- Router: Handles navigation between screens.
+
+The project also uses the Realm database, which is a mobile database that allows for easy storage and retrieval of data. 
+
+It also uses the RXSwift framework, which is a reactive programming framework that allows for declarative programming of asynchronous operations. This allows for a more concise and readable code, as well as easier management of data flows.
